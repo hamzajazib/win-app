@@ -17,21 +17,13 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+using System.Collections.Generic;
 
-using System.Security;
-using ProtonVPN.Client.Logic.Auth.Contracts.Models;
+namespace ProtonVPN.Api.Contracts.Auth.Fido2;
 
-namespace ProtonVPN.Client.Logic.Auth;
-
-public interface ISrpAuthenticator
+public class Fido2RegisteredKeysResponse
 {
-    bool IsTwoFactorAuthenticatorModeEnabled { get; }
-
-    bool IsTwoFactorSecurityKeyModeEnabled { get; }
-
-    Task<AuthResult> LoginUserAsync(string username, SecureString password, CancellationToken cancellationToken);
-
-    Task<AuthResult> SendTwoFactorCodeAsync(string code, CancellationToken cancellationToken);
-
-    Task<AuthResult> AuthenticateWithSecurityKeyAsync(CancellationToken cancellationToken);
+    public string AttestationFormat { get; set; }
+    public List<byte> CredentialID { get; set; }
+    public string Name { get; set; }
 }
