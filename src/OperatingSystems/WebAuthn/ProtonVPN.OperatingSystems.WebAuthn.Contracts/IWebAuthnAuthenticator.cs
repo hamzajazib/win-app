@@ -17,25 +17,16 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using System.Collections.Generic;
-using Newtonsoft.Json;
+namespace ProtonVPN.OperatingSystems.WebAuthn.Contracts;
 
-namespace ProtonVPN.Api.Contracts.Auth.Fido2;
-
-public class Fido2PublicKeyResponse
+public interface IWebAuthnAuthenticator
 {
-    [JsonProperty(PropertyName = "timeout")]
-    public int Timeout { get; set; }
-
-    [JsonProperty(PropertyName = "challenge")]
-    public List<byte> Challenge { get; set; }
-
-    [JsonProperty(PropertyName = "userVerification")]
-    public string UserVerification { get; set; }
-
-    [JsonProperty(PropertyName = "rpId")]
-    public string RpId { get; set; }
-
-    [JsonProperty(PropertyName = "allowCredentials")]
-    public List<Fido2PublicKeyAllowCredentialsResponse> AllowCredentials { get; set; }
+    public Task<WebAuthnResponse> AuthenticateAsync(
+        string rpId,
+        byte[] challenge,
+        string userVerificationRequirement = null,
+        int? timeoutInMilliseconds = null,
+        IReadOnlyList<AllowedCredential> allowedCredentials = null,
+        CancellationToken cancellationToken = default
+    );
 }
