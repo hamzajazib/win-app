@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright (c) 2025 Proton AG
+ * Copyright (c) 2023 Proton AG
  *
  * This file is part of ProtonVPN.
  *
@@ -17,19 +17,21 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+using ProtonVPN.Client.Common.Enums;
+
 namespace ProtonVPN.Client.Logic.Profiles.Contracts.Models;
 
-public class ProfileOptions : IProfileOptions
+public interface IConnectAndGoOption
 {
-    public static IProfileOptions Default => new ProfileOptions();
+    bool IsEnabled { get; set; }
 
-    public IConnectAndGoOption ConnectAndGo { get; set; } = ConnectAndGoOption.Default;
+    ConnectAndGoMode Mode { get; set; }
 
-    public IProfileOptions Copy()
-    {
-        return new ProfileOptions()
-        {
-            ConnectAndGo = ConnectAndGo.Copy(),
-        };
-    }
+    bool UsePrivateBrowsingMode { get; set; }
+
+    string Url { get; set; }
+
+    string? AppPath { get; set; }
+
+    IConnectAndGoOption Copy();
 }

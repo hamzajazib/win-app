@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright (c) 2023 Proton AG
+ * Copyright (c) 2025 Proton AG
  *
  * This file is part of ProtonVPN.
  *
@@ -17,36 +17,32 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Media;
+using ProtonVPN.Client.Common.Enums;
 using ProtonVPN.Client.Core.Bases.Models;
-using ProtonVPN.Client.Core.Helpers;
-using ProtonVPN.Client.Core.Services.Selection;
 using ProtonVPN.Client.Localization.Contracts;
 using ProtonVPN.Client.Localization.Extensions;
 
-namespace ProtonVPN.Client.Models.Settings;
+namespace ProtonVPN.Client.Models.Profiles;
 
-public class PortForwardingItem : ModelBase
+public class ConnectAndGoModeItem : ModelBase
 {
     public bool IsEnabled { get; }
 
-    public string Header => Localizer.GetToggleValue(IsEnabled);
+    public ConnectAndGoMode Mode { get; }
 
-    public ImageSource IllustrationSource { get; }
+    public string Header => Localizer.GetConnectAndGoMode(IsEnabled, Mode);
 
-    public PortForwardingItem(
+    public bool IsConnectAndGoToWebsiteEnabled => IsEnabled && Mode == ConnectAndGoMode.Website;
+
+    public bool IsConnectAndGoToApplicationEnabled => IsEnabled && Mode == ConnectAndGoMode.Application;
+
+    public ConnectAndGoModeItem(
         ILocalizationProvider localizer,
-        IApplicationThemeSelector themeSelector,
-        bool isEnabled)
+        bool isEnabled,
+        ConnectAndGoMode mode)
         : base(localizer)
     {
         IsEnabled = isEnabled;
-
-        ElementTheme theme = themeSelector.GetTheme();
-
-        IllustrationSource = IsEnabled
-            ? ResourceHelper.GetIllustration("PortForwardingOnIllustrationSource", theme)
-            : ResourceHelper.GetIllustration("PortForwardingOffIllustrationSource", theme);
+        Mode = mode;
     }
 }

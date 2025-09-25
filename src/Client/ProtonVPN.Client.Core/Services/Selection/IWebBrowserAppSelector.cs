@@ -17,19 +17,11 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace ProtonVPN.Client.Logic.Profiles.Contracts.Models;
+using ProtonVPN.Client.Core.Models;
 
-public class ProfileOptions : IProfileOptions
+namespace ProtonVPN.Client.Core.Services.Selection;
+
+public interface IWebBrowserAppSelector
 {
-    public static IProfileOptions Default => new ProfileOptions();
-
-    public IConnectAndGoOption ConnectAndGo { get; set; } = ConnectAndGoOption.Default;
-
-    public IProfileOptions Copy()
-    {
-        return new ProfileOptions()
-        {
-            ConnectAndGo = ConnectAndGo.Copy(),
-        };
-    }
+    WebBrowserApp? GetDefaultWebBrowserApp();
 }

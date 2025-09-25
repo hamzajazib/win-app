@@ -17,19 +17,12 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace ProtonVPN.Client.Logic.Profiles.Contracts.Models;
+using ProtonVPN.Client.Common.Enums;
 
-public class ProfileOptions : IProfileOptions
+namespace ProtonVPN.Client.Logic.Profiles.Contracts;
+
+public static class DefaultProfileSettings
 {
-    public static IProfileOptions Default => new ProfileOptions();
-
-    public IConnectAndGoOption ConnectAndGo { get; set; } = ConnectAndGoOption.Default;
-
-    public IProfileOptions Copy()
-    {
-        return new ProfileOptions()
-        {
-            ConnectAndGo = ConnectAndGo.Copy(),
-        };
-    }
+    public static bool IsConnectAndGoEnabled = false;
+    public static ConnectAndGoMode ConnectAndGoMode = ConnectAndGoMode.Website;
 }
