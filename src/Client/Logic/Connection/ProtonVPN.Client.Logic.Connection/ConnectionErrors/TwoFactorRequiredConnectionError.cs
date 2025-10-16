@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright (c) 2024 Proton AG
+ * Copyright (c) 2025 Proton AG
  *
  * This file is part of ProtonVPN.
  *
@@ -18,23 +18,27 @@
  */
 
 using ProtonVPN.Client.Common.Enums;
-using ProtonVPN.Client.Logic.Connection.Contracts;
+using ProtonVPN.Client.Localization.Contracts;
 
 namespace ProtonVPN.Client.Logic.Connection.ConnectionErrors;
 
-public class NoConnectionError : IConnectionError
+public class TwoFactorRequiredConnectionError : ConnectionErrorBase
 {
-    public Severity Severity => Severity.None;
+    public override Severity Severity => Severity.Warning;
 
-    public string Title => string.Empty;
+    public override string Title => Localizer.Get("Connection_Error_TwoFactorRequired_Title");
 
-    public string Message => string.Empty;
+    public override string Message => Localizer.Get("Connection_Error_TwoFactorRequired_Description");
 
-    public string ActionLabel => string.Empty;
+    public override string ActionLabel => string.Empty;
 
-    public bool IsToCloseErrorOnDisconnect => false;
+    public override bool IsToCloseErrorOnDisconnect => true;
 
-    public Task ExecuteActionAsync()
+    public TwoFactorRequiredConnectionError(ILocalizationProvider localizer)
+        : base(localizer)
+    { }
+
+    public override Task ExecuteActionAsync()
     {
         return Task.CompletedTask;
     }

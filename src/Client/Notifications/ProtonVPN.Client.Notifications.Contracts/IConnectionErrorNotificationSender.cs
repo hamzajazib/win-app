@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright (c) 2025 Proton AG
+ * Copyright (c) 2023 Proton AG
  *
  * This file is part of ProtonVPN.
  *
@@ -17,17 +17,11 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using ProtonVPN.Client.Core.Bases;
-using ProtonVPN.Client.Core.Bases.ViewModels;
-using ProtonVPN.Client.Core.Services.Navigation;
+namespace ProtonVPN.Client.Notifications.Contracts;
 
-namespace ProtonVPN.Client.UI.Main.Home.Details;
-
-public partial class DetailsComponentViewModel : HostViewModelBase<IDetailsViewNavigator>
+public interface IConnectionErrorNotificationSender
 {
-    public DetailsComponentViewModel(
-        IDetailsViewNavigator childViewNavigator,
-        IViewModelHelper viewModelHelper)
-        : base(childViewNavigator, viewModelHelper)
-    { }
+    void SendSessionLimitNotification();
+
+    void SendTwoFactorRequiredNotification();
 }
