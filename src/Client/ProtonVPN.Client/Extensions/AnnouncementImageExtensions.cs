@@ -1,5 +1,5 @@
-﻿/*
- * Copyright (c) 2024 Proton AG
+/*
+ * Copyright (c) 2025 Proton AG
  *
  * This file is part of ProtonVPN.
  *
@@ -17,13 +17,25 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+using Microsoft.UI.Xaml;
 using ProtonVPN.Client.Files.Contracts.Images;
+using ProtonVPN.Client.Logic.Announcements.Contracts.Entities;
 
-namespace ProtonVPN.Client.Logic.Announcements.Contracts.Entities;
+namespace ProtonVPN.Client.Extensions;
 
-public class FullScreenImage
+public static class AnnouncementImageExtensions
 {
-    public CachedImage? Image { get; set; }
-    public CachedImage? ImageLight { get; set; }
-    public string? AlternativeText { get; set; }
+    public static CachedImage? GetImageForTheme(this FullScreenImage? fullScreenImage, ElementTheme theme)
+    {
+        if (fullScreenImage is null)
+        {
+            return null;
+        }
+
+        bool isLightTheme = theme == ElementTheme.Light;
+        
+        return isLightTheme && fullScreenImage.ImageLight.HasValue 
+            ? fullScreenImage.ImageLight 
+            : fullScreenImage.Image;
+    }
 }
