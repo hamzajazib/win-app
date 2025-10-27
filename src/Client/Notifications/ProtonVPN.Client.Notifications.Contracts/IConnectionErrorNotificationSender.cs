@@ -17,30 +17,11 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using Microsoft.Win32;
+namespace ProtonVPN.Client.Notifications.Contracts;
 
-namespace ProtonVPN.Common.Legacy.OS.Registry;
-
-public class SystemProxy : ISystemProxy
+public interface IConnectionErrorNotificationSender
 {
-    private const string REG_KEY = "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings";
+    void SendSessionLimitNotification();
 
-    public bool Enabled()
-    {
-        using (RegistryKey key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(REG_KEY, false))
-        {
-            if (key == null)
-            {
-                return false;
-            }
-
-            int? value = key.GetValue("ProxyEnable") as int?;
-            if (value == null)
-            {
-                return false;
-            }
-
-            return value == 1;
-        }
-    }
+    void SendTwoFactorRequiredNotification();
 }

@@ -376,8 +376,16 @@
   <data name="Connection_Error_TlsCertificate">
     <value>Υπάρχει πρόβλημα με την επικύρωση του πιστοποιητικού διακομιστή VPN, το οποίο μπορεί να υποδεικνύει ότι η σύνδεση δικτύου έχει αλλοιωθεί ή ότι ο διακομιστής στον οποίο προσπαθείτε να συνδεθείτε έχει πρόβλημα ρύθμισης παραμέτρων. Λάβετε βοήθεια από την υποστήριξη πελατών μας στέλνοντας μια αναφορά ζητήματος.</value>
   </data>
+  <data name="Connection_Error_TwoFactorRequired_Description">
+    <value>Για να συνδεθείτε στο VPN, μεταβείτε στην πύλη ταυτοποίησης δύο παραγόντων (2FA) του οργανισμού σας και πατήστε το κλειδί ασφαλείας σας.</value>
+  </data>
+  <data name="Connection_Error_TwoFactorRequired_Title">
+    <value>Η ταυτοποίηση δύο παραγόντων (2FA) απαιτείται</value>
+  </data>
   <data name="Connection_Error_Unknown">
-    <value>Δεν είμαστε σίγουροι τι συνέβη εδώ. Παρακαλούμε δοκιμάστε ξανά ή επικοινωνήστε με την ομάδα υποστήριξης πελατών μας.</value>
+    <value>Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά. Εάν αυτό δε λειτουργήσει, επικοινωνήστε με την ομάδα υποστήριξης πελατών μας.
+
+Κωδικός σφάλματος: {0}</value>
   </data>
   <data name="Connection_Error_ViewPossibleSolutions">
     <value>Προβολή διορθώσεων</value>
@@ -441,10 +449,10 @@
     <value>Γρηγορότερο</value>
   </data>
   <data name="Connections_Free_Servers_One">
-    <value>Δωρεάν διακομιστής ({0})</value>
+    <value>Δωρεάν διακομιστής</value>
   </data>
   <data name="Connections_Free_Servers_Other">
-    <value>Δωρεάν διακομιστές ({0})</value>
+    <value>Δωρεάν διακομιστές</value>
   </data>
   <data name="Connections_Gateway">
     <value>Πύλη</value>
@@ -483,10 +491,10 @@
     <value>P2P χώρες ({0})</value>
   </data>
   <data name="Connections_P2P_Servers_One">
-    <value>Διακομιστής P2P ({0})</value>
+    <value>Διακομιστής P2P</value>
   </data>
   <data name="Connections_P2P_Servers_Other">
-    <value>Διακομιστές P2P ({0})</value>
+    <value>Διακομιστές P2P</value>
   </data>
   <data name="Connections_P2P_States_One">
     <value>Πολιτεία P2P ({0})</value>
@@ -576,10 +584,10 @@
     <value>Χώρες Secure Core ({0})</value>
   </data>
   <data name="Connections_SecureCore_Servers_One">
-    <value>Διακομιστής Secure Core ({0})</value>
+    <value>Διακομιστής Secure Core</value>
   </data>
   <data name="Connections_SecureCore_Servers_Other">
-    <value>Διακομιστές Secure Core ({0})</value>
+    <value>Διακομιστές Secure Core</value>
   </data>
   <data name="Connections_SeeCities_One">
     <value>Δείτε πόλη ({0})</value>
@@ -609,10 +617,10 @@
     <value>Αυτός ο διακομιστής είναι υπό συντήρηση</value>
   </data>
   <data name="Connections_Servers_One">
-    <value>Διακομιστής ({0})</value>
+    <value>Διακομιστής</value>
   </data>
   <data name="Connections_Servers_Other">
-    <value>Διακομιστές ({0})</value>
+    <value>Διακομιστές</value>
   </data>
   <data name="Connections_State">
     <value>Πολιτεία</value>
@@ -638,10 +646,10 @@
     <value>Tor χώρες ({0})</value>
   </data>
   <data name="Connections_Tor_Servers_One">
-    <value>Διακομιστής Tor ({0})</value>
+    <value>Διακομιστής Tor</value>
   </data>
   <data name="Connections_Tor_Servers_Other">
-    <value>Διακομιστές Tor ({0})</value>
+    <value>Διακομιστές Tor</value>
   </data>
   <data name="Countries">
     <value>Χώρες</value>
@@ -2633,6 +2641,12 @@
   <data name="Home_ConnectionDetails_Title">
     <value>Λεπτομέρειες σύνδεσης</value>
   </data>
+  <data name="Home_ConnectionDetails_TwoFactorRequired_Description">
+    <value>Επαναπιστοποιηθείτε στην πύλη ταυτοποίησης δύο παραγώντων (2FA) του οργανισμού σας για να συνεχίσετε.</value>
+  </data>
+  <data name="Home_ConnectionDetails_TwoFactorRequired_Title">
+    <value>Η ταυτοποίηση δύο παραγόντων (2FA) έληξε</value>
+  </data>
   <data name="Home_ConnectionDetails_Unprotected">
     <value>Χωρίς προστασία</value>
   </data>
@@ -2787,6 +2801,9 @@
   </data>
   <data name="Login_Error_TwoFactorFailed">
     <value>Ο έλεγχος ταυτότητας δύο παραγόντων απέτυχε. Παρακαλούμε συνδεθείτε ξανά.</value>
+  </data>
+  <data name="Login_Error_WebAuthnNotSupported">
+    <value>Η επαλήθευση κλειδιού ασφαλείας δεν είναι διαθέσιμη για τη συσκευή σας ή τη σύνδεση απομακρυσμένης επιφάνειας εργασίας.</value>
   </data>
   <data name="Login_TwoFactorForm_Authenticate">
     <value>Ταυτοποίηση</value>
@@ -3081,7 +3098,7 @@
     <value>Ανοίξτε μια ιστοσελίδα</value>
   </data>
   <data name="Profile_Options_Description">
-    <value>Αυτόματο άνοιγμα της επιλεγμένης ιστοσελίδας κατά τη σύνδεσή σας σε αυτό το προφίλ.</value>
+    <value>Αυτόματο άνοιγμα ιστοσελίδας ή εφαρμογής της επιλογής σας όταν συνδέεστε σε αυτό το προφίλ.</value>
   </data>
   <data name="Profile_Options_Header">
     <value>Σύνδεση και Μετάβαση</value>

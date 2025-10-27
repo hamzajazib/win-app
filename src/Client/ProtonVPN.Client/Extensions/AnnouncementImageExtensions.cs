@@ -1,5 +1,5 @@
-﻿/*
- * Copyright (c) 2023 Proton AG
+/*
+ * Copyright (c) 2025 Proton AG
  *
  * This file is part of ProtonVPN.
  *
@@ -17,30 +17,25 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using Microsoft.Win32;
+using Microsoft.UI.Xaml;
+using ProtonVPN.Client.Files.Contracts.Images;
+using ProtonVPN.Client.Logic.Announcements.Contracts.Entities;
 
-namespace ProtonVPN.Common.Legacy.OS.Registry;
+namespace ProtonVPN.Client.Extensions;
 
-public class SystemProxy : ISystemProxy
+public static class AnnouncementImageExtensions
 {
-    private const string REG_KEY = "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings";
-
-    public bool Enabled()
+    public static CachedImage? GetImageForTheme(this FullScreenImage? fullScreenImage, ElementTheme theme)
     {
-        using (RegistryKey key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(REG_KEY, false))
+        if (fullScreenImage is null)
         {
-            if (key == null)
-            {
-                return false;
-            }
-
-            int? value = key.GetValue("ProxyEnable") as int?;
-            if (value == null)
-            {
-                return false;
-            }
-
-            return value == 1;
+            return null;
         }
+
+        bool isLightTheme = theme == ElementTheme.Light;
+        
+        return isLightTheme && fullScreenImage.ImageLight.HasValue 
+            ? fullScreenImage.ImageLight 
+            : fullScreenImage.Image;
     }
 }

@@ -376,8 +376,16 @@
   <data name="Connection_Error_TlsCertificate">
     <value>Выяўлена праблема з праверкай сертыфіката сервера VPN, якая можа ўказваць на тое, што сеткавае падключэнне перахоплена або сервер да якога вы спрабуеце падключыцца мае праблемы з канфігурацыяй. Звярніцеся ў нашу службу падтрымкі, адправіўшы нам справаздачу з праблемай.</value>
   </data>
+  <data name="Connection_Error_TwoFactorRequired_Description">
+    <value>Перайдзіце на партал 2ФА вашай арганізацыі і націсніце на ключ бяспекі, каб падключыцца да VPN.</value>
+  </data>
+  <data name="Connection_Error_TwoFactorRequired_Title">
+    <value>Патрабуецца двухфактарная аўтэнтыфікацыя (2ФА)</value>
+  </data>
   <data name="Connection_Error_Unknown">
-    <value>Мы пакуль не разумеем, што тут адбылося. Паспрабуйце яшчэ раз або звярніцеся ў нашу каманду падтрымкі кліентаў.</value>
+    <value>Праверце падключэнне да інтэрнэту і паспрабуйце яшчэ раз. Калі гэта не дапаможа, звярніцеся ў нашу службу падтрымкі кліентаў.
+
+Код памылкі: {0}</value>
   </data>
   <data name="Connection_Error_ViewPossibleSolutions">
     <value>Паглядзець выпраўленні</value>
@@ -453,16 +461,16 @@
     <value>Найхутчэйшыя</value>
   </data>
   <data name="Connections_Free_Servers_One">
-    <value>Бясплатны сервер ({0})</value>
+    <value>Бясплатны сервер</value>
   </data>
   <data name="Connections_Free_Servers_Few">
-    <value>Бясплатныя серверы ({0})</value>
+    <value>Бясплатныя серверы</value>
   </data>
   <data name="Connections_Free_Servers_Many">
-    <value>Бясплатныя серверы ({0})</value>
+    <value>Бясплатныя серверы</value>
   </data>
   <data name="Connections_Free_Servers_Other">
-    <value>Бясплатныя серверы ({0})</value>
+    <value>Бясплатныя серверы</value>
   </data>
   <data name="Connections_Gateway">
     <value>Шлюз</value>
@@ -525,16 +533,16 @@
     <value>Краіны P2P ({0})</value>
   </data>
   <data name="Connections_P2P_Servers_One">
-    <value>Сервер P2P ({0})</value>
+    <value>Сервер P2P</value>
   </data>
   <data name="Connections_P2P_Servers_Few">
-    <value>Серверы P2P ({0})</value>
+    <value>Серверы P2P</value>
   </data>
   <data name="Connections_P2P_Servers_Many">
-    <value>Серверы P2P ({0})</value>
+    <value>Серверы P2P</value>
   </data>
   <data name="Connections_P2P_Servers_Other">
-    <value>Серверы P2P ({0})</value>
+    <value>Серверы P2P</value>
   </data>
   <data name="Connections_P2P_States_One">
     <value>Штат P2P ({0})</value>
@@ -654,16 +662,16 @@
     <value>Краіны Secure Core ({0})</value>
   </data>
   <data name="Connections_SecureCore_Servers_One">
-    <value>Сервер Secure Core ({0})</value>
+    <value>Сервер Secure Core</value>
   </data>
   <data name="Connections_SecureCore_Servers_Few">
-    <value>Серверы Secure Core ({0})</value>
+    <value>Серверы Secure Core</value>
   </data>
   <data name="Connections_SecureCore_Servers_Many">
-    <value>Серверы Secure Core ({0})</value>
+    <value>Серверы Secure Core</value>
   </data>
   <data name="Connections_SecureCore_Servers_Other">
-    <value>Серверы Secure Core ({0})</value>
+    <value>Серверы Secure Core</value>
   </data>
   <data name="Connections_SeeCities_One">
     <value>Паглядзець горад ({0})</value>
@@ -711,16 +719,16 @@
     <value>Гэты сервер на тэхнічным абслугоўванні</value>
   </data>
   <data name="Connections_Servers_One">
-    <value>Сервер ({0})</value>
+    <value>Сервер</value>
   </data>
   <data name="Connections_Servers_Few">
-    <value>Серверы ({0})</value>
+    <value>Серверы</value>
   </data>
   <data name="Connections_Servers_Many">
-    <value>Серверы ({0})</value>
+    <value>Серверы</value>
   </data>
   <data name="Connections_Servers_Other">
-    <value>Серверы ({0})</value>
+    <value>Серверы</value>
   </data>
   <data name="Connections_State">
     <value>Штат</value>
@@ -758,16 +766,16 @@
     <value>Краіны Tor ({0})</value>
   </data>
   <data name="Connections_Tor_Servers_One">
-    <value>Сервер Tor ({0})</value>
+    <value>Сервер Tor</value>
   </data>
   <data name="Connections_Tor_Servers_Few">
-    <value>Серверы Tor ({0})</value>
+    <value>Серверы Tor</value>
   </data>
   <data name="Connections_Tor_Servers_Many">
-    <value>Серверы Tor ({0})</value>
+    <value>Серверы Tor</value>
   </data>
   <data name="Connections_Tor_Servers_Other">
-    <value>Серверы Tor ({0})</value>
+    <value>Серверы Tor</value>
   </data>
   <data name="Countries">
     <value>Краіны</value>
@@ -2837,6 +2845,12 @@
   <data name="Home_ConnectionDetails_Title">
     <value>Падрабязнасці падключэння</value>
   </data>
+  <data name="Home_ConnectionDetails_TwoFactorRequired_Description">
+    <value>Аўтарызуйцеся паўторна на партале 2ФА вашай арганізацыі, каб працягнуць.</value>
+  </data>
+  <data name="Home_ConnectionDetails_TwoFactorRequired_Title">
+    <value>2ФА пратэрмінаваны</value>
+  </data>
   <data name="Home_ConnectionDetails_Unprotected">
     <value>Не абаронена</value>
   </data>
@@ -3003,6 +3017,9 @@
   </data>
   <data name="Login_Error_TwoFactorFailed">
     <value>Збой двухфактарнай аўтэнтыфікацыі. Увайдзіце яшчэ раз.</value>
+  </data>
+  <data name="Login_Error_WebAuthnNotSupported">
+    <value>Аўтэнтыфікацыя ключом бяспекі не падтрымліваецца вашай прыладай або вашым падключэннем да аддаленага працоўнага стала.</value>
   </data>
   <data name="Login_TwoFactorForm_Authenticate">
     <value>Аўтэнтыфіцыраваць</value>
@@ -3297,7 +3314,7 @@ Secure Core</value>
     <value>Адкрыць вэб-сайт</value>
   </data>
   <data name="Profile_Options_Description">
-    <value>Аўтаматычна адкрываць выбраны вэб-сайт пры падключэнні да гэтага профілю.</value>
+    <value>Аўтаматычна адкрываць вэб-сайт або выбраную вамі праграму пры падключэнні да гэтага профілю.</value>
   </data>
   <data name="Profile_Options_Header">
     <value>Падключыцца і адкрыць</value>

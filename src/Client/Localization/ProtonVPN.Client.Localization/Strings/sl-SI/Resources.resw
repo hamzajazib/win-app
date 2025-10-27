@@ -376,8 +376,16 @@
   <data name="Connection_Error_TlsCertificate">
     <value>Prišlo je do težave pri preverjanju potrdila strežnika VPN, kar lahko pomeni, da je prišlo do poseganja v omrežno povezavo ali da ima strežnik, s katerim se poskušate povezati, težavo s konfiguracijo. Poiščite pomoč naše podpore strankam tako, da pošljete poročilo o težavi.</value>
   </data>
+  <data name="Connection_Error_TwoFactorRequired_Description">
+    <value>To connect to VPN, go to your organization's 2FA portal and tap your security key.</value>
+  </data>
+  <data name="Connection_Error_TwoFactorRequired_Title">
+    <value>Two-factor authentication (2FA) required</value>
+  </data>
   <data name="Connection_Error_Unknown">
-    <value>Ne vemo, kaj se je tukaj zgodilo. Poskusite znova ali se obrnite na našo ekipo za podporo strankam.</value>
+    <value>Check your internet connection and try again. If that doesn't work, contact our customer support team.
+
+Error code: {0}</value>
   </data>
   <data name="Connection_Error_ViewPossibleSolutions">
     <value>Prikaži popravke</value>
@@ -453,16 +461,16 @@
     <value>Najhitrejši</value>
   </data>
   <data name="Connections_Free_Servers_One">
-    <value>Brezplačni strežnik ({0})</value>
+    <value>Free server</value>
   </data>
   <data name="Connections_Free_Servers_Two">
-    <value>Brezplačna strežnika ({0})</value>
+    <value>Free servers</value>
   </data>
   <data name="Connections_Free_Servers_Few">
-    <value>Brezplačni strežniki ({0})</value>
+    <value>Free servers</value>
   </data>
   <data name="Connections_Free_Servers_Other">
-    <value>Brezplačnih strežnikov ({0})</value>
+    <value>Free servers</value>
   </data>
   <data name="Connections_Gateway">
     <value>Prehod</value>
@@ -525,16 +533,16 @@
     <value>Držav P2P ({0})</value>
   </data>
   <data name="Connections_P2P_Servers_One">
-    <value>P2P strežnik ({0})</value>
+    <value>P2P server</value>
   </data>
   <data name="Connections_P2P_Servers_Two">
-    <value>P2P strežnika ({0})</value>
+    <value>P2P servers</value>
   </data>
   <data name="Connections_P2P_Servers_Few">
-    <value>P2P strežniki ({0})</value>
+    <value>P2P servers</value>
   </data>
   <data name="Connections_P2P_Servers_Other">
-    <value>P2P strežniki ({0})</value>
+    <value>P2P servers</value>
   </data>
   <data name="Connections_P2P_States_One">
     <value>Zvezna država P2P ({0})</value>
@@ -654,16 +662,16 @@
     <value>Držav Secure Core ({0})</value>
   </data>
   <data name="Connections_SecureCore_Servers_One">
-    <value>Secure Core strežnik ({0})</value>
+    <value>Secure Core server</value>
   </data>
   <data name="Connections_SecureCore_Servers_Two">
-    <value>Secure Core strežnika ({0})</value>
+    <value>Secure Core servers</value>
   </data>
   <data name="Connections_SecureCore_Servers_Few">
-    <value>Secure Core strežniki ({0})</value>
+    <value>Secure Core servers</value>
   </data>
   <data name="Connections_SecureCore_Servers_Other">
-    <value>Secure Core strežniki ({0})</value>
+    <value>Secure Core servers</value>
   </data>
   <data name="Connections_SeeCities_One">
     <value>Glej mesto ({0})</value>
@@ -711,16 +719,16 @@
     <value>Ta strežnik je v vzdrževanju</value>
   </data>
   <data name="Connections_Servers_One">
-    <value>Strežnik ({0})</value>
+    <value>Server</value>
   </data>
   <data name="Connections_Servers_Two">
-    <value>Strežnika ({0})</value>
+    <value>Servers</value>
   </data>
   <data name="Connections_Servers_Few">
-    <value>Strežniki ({0})</value>
+    <value>Servers</value>
   </data>
   <data name="Connections_Servers_Other">
-    <value>Strežnikov ({0})</value>
+    <value>Servers</value>
   </data>
   <data name="Connections_State">
     <value>Država</value>
@@ -758,16 +766,16 @@
     <value>Držav Tor ({0})</value>
   </data>
   <data name="Connections_Tor_Servers_One">
-    <value>Strežnik Tor ({0})</value>
+    <value>Tor server</value>
   </data>
   <data name="Connections_Tor_Servers_Two">
-    <value>Strežnika Tor ({0})</value>
+    <value>Tor servers</value>
   </data>
   <data name="Connections_Tor_Servers_Few">
-    <value>Strežniki Tor ({0})</value>
+    <value>Tor servers</value>
   </data>
   <data name="Connections_Tor_Servers_Other">
-    <value>Strežnikov Tor ({0})</value>
+    <value>Tor servers</value>
   </data>
   <data name="Countries">
     <value>Države</value>
@@ -2837,6 +2845,12 @@ Velika obremenitev strežnika lahko upočasni vašo povezavo.</value>
   <data name="Home_ConnectionDetails_Title">
     <value>Podrobnosti povezave</value>
   </data>
+  <data name="Home_ConnectionDetails_TwoFactorRequired_Description">
+    <value>Re-authenticate in your organization's 2FA portal to continue.</value>
+  </data>
+  <data name="Home_ConnectionDetails_TwoFactorRequired_Title">
+    <value>2FA expired</value>
+  </data>
   <data name="Home_ConnectionDetails_Unprotected">
     <value>Nezaščiteno</value>
   </data>
@@ -3003,6 +3017,9 @@ Velika obremenitev strežnika lahko upočasni vašo povezavo.</value>
   </data>
   <data name="Login_Error_TwoFactorFailed">
     <value>Dvostopenjska avtentikacija ni uspela. Prosimo, prijavite se znova.</value>
+  </data>
+  <data name="Login_Error_WebAuthnNotSupported">
+    <value>Security key authentication is not available for your device or remote desktop connection.</value>
   </data>
   <data name="Login_TwoFactorForm_Authenticate">
     <value>Preverjanje pristnosti</value>
@@ -3297,7 +3314,7 @@ Velika obremenitev strežnika lahko upočasni vašo povezavo.</value>
     <value>Open a website</value>
   </data>
   <data name="Profile_Options_Description">
-    <value>Automatically open a website of your choice when you connect to this profile.</value>
+    <value>Automatically open a website or an app of your choice when you connect to this profile.</value>
   </data>
   <data name="Profile_Options_Header">
     <value>Poveži se in odpri</value>

@@ -376,8 +376,16 @@
   <data name="Connection_Error_TlsCertificate">
     <value>Hay un problema al validar el certificado del servidor VPN, lo que podría indicar que la conexión de red está siendo manipulada o que el servidor al que estás intentando conectarte tiene un problema de configuración. Envía una notificación del problema para obtener ayuda de nuestro servicio de atención al cliente.</value>
   </data>
+  <data name="Connection_Error_TwoFactorRequired_Description">
+    <value>To connect to VPN, go to your organization's 2FA portal and tap your security key.</value>
+  </data>
+  <data name="Connection_Error_TwoFactorRequired_Title">
+    <value>Two-factor authentication (2FA) required</value>
+  </data>
   <data name="Connection_Error_Unknown">
-    <value>No estamos seguros de lo que ha ocurrido. Inténtalo de nuevo o ponte en contacto con nuestro equipo de atención al cliente.</value>
+    <value>Revisa tu conexión a internet e inténtalo de nuevo. Si eso no funciona, contacta a nuestro equipo de atención al cliente.
+
+Código de error: {0}</value>
   </data>
   <data name="Connection_Error_ViewPossibleSolutions">
     <value>Ver las correcciones</value>
@@ -441,10 +449,10 @@
     <value>Más rápida</value>
   </data>
   <data name="Connections_Free_Servers_One">
-    <value>Servidor gratuito ({0})</value>
+    <value>Servidor gratuito</value>
   </data>
   <data name="Connections_Free_Servers_Other">
-    <value>Servidores gratuitos ({0})</value>
+    <value>Servidores gratuitos</value>
   </data>
   <data name="Connections_Gateway">
     <value>Puerta de enlace</value>
@@ -483,10 +491,10 @@
     <value>Países P2P ({0})</value>
   </data>
   <data name="Connections_P2P_Servers_One">
-    <value>Servidor P2P ({0})</value>
+    <value>Servidor P2P</value>
   </data>
   <data name="Connections_P2P_Servers_Other">
-    <value>Servidores P2P ({0})</value>
+    <value>Servidores P2P</value>
   </data>
   <data name="Connections_P2P_States_One">
     <value>Estado P2P ({0})</value>
@@ -576,10 +584,10 @@
     <value>Países Secure Core ({0})</value>
   </data>
   <data name="Connections_SecureCore_Servers_One">
-    <value>Servidor Secure Core ({0})</value>
+    <value>Secure Core server</value>
   </data>
   <data name="Connections_SecureCore_Servers_Other">
-    <value>Servidores Secure Core ({0})</value>
+    <value>Secure Core servers</value>
   </data>
   <data name="Connections_SeeCities_One">
     <value>Ver ciudad ({0})</value>
@@ -609,10 +617,10 @@
     <value>El servidor está en mantenimiento</value>
   </data>
   <data name="Connections_Servers_One">
-    <value>Servidor ({0})</value>
+    <value>Servidor</value>
   </data>
   <data name="Connections_Servers_Other">
-    <value>Servidores ({0})</value>
+    <value>Servidores</value>
   </data>
   <data name="Connections_State">
     <value>Estado</value>
@@ -638,10 +646,10 @@
     <value>Países Tor ({0})</value>
   </data>
   <data name="Connections_Tor_Servers_One">
-    <value>Servidor Tor ({0})</value>
+    <value>Servidor Tor</value>
   </data>
   <data name="Connections_Tor_Servers_Other">
-    <value>Servidores Tor ({0})</value>
+    <value>Servidores Tor</value>
   </data>
   <data name="Countries">
     <value>Países</value>
@@ -2633,6 +2641,12 @@ Una carga del servidor alta puede ralentizar tu conexión.</value>
   <data name="Home_ConnectionDetails_Title">
     <value>Detalles de la conexión</value>
   </data>
+  <data name="Home_ConnectionDetails_TwoFactorRequired_Description">
+    <value>Re-authenticate in your organization's 2FA portal to continue.</value>
+  </data>
+  <data name="Home_ConnectionDetails_TwoFactorRequired_Title">
+    <value>2FA expired</value>
+  </data>
   <data name="Home_ConnectionDetails_Unprotected">
     <value>No protegido</value>
   </data>
@@ -2787,6 +2801,9 @@ Una carga del servidor alta puede ralentizar tu conexión.</value>
   </data>
   <data name="Login_Error_TwoFactorFailed">
     <value>Error con la autenticación en dos pasos. Inicia sesión de nuevo.</value>
+  </data>
+  <data name="Login_Error_WebAuthnNotSupported">
+    <value>Security key authentication is not available for your device or remote desktop connection.</value>
   </data>
   <data name="Login_TwoFactorForm_Authenticate">
     <value>Autenticar</value>
@@ -3081,7 +3098,7 @@ Una carga del servidor alta puede ralentizar tu conexión.</value>
     <value>Open a website</value>
   </data>
   <data name="Profile_Options_Description">
-    <value>Abre automáticamente un sitio web de tu elección cuando te conectes a este perfil.</value>
+    <value>Automatically open a website or an app of your choice when you connect to this profile.</value>
   </data>
   <data name="Profile_Options_Header">
     <value>Conectar y listo</value>

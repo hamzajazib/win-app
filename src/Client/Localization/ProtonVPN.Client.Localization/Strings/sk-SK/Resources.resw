@@ -376,8 +376,16 @@
   <data name="Connection_Error_TlsCertificate">
     <value>Vyskytol sa problém s overením certifikátu servera VPN, čo môže znamenať, že sa so sieťovým pripojením manipuluje alebo že server, ku ktorému sa snažíte pripojiť, má problém s konfiguráciou. Získajte pomoc od našej zákazníckej podpory zaslaním hlásenia o probléme.</value>
   </data>
+  <data name="Connection_Error_TwoFactorRequired_Description">
+    <value>Pre pripojenie k VPN prejdite na portál 2FA vašej organizácie a ťuknite na svoj bezpečnostný kľúč.</value>
+  </data>
+  <data name="Connection_Error_TwoFactorRequired_Title">
+    <value>Vyžaduje sa dvojstupňové overenie (2FA)</value>
+  </data>
   <data name="Connection_Error_Unknown">
-    <value>Nie sme si istí, čo sa tu stalo. Skúste to znova, prosím, alebo kontaktujte náš tím zákazníckej podpory.</value>
+    <value>Skontrolujte vaše internetové pripojenie a skúste to znova. Ak to nepomôže, kontaktujte náš tím zákazníckej podpory.
+
+Chybový kód: {0}</value>
   </data>
   <data name="Connection_Error_ViewPossibleSolutions">
     <value>Zobraziť opravy</value>
@@ -453,16 +461,16 @@
     <value>Najrýchlejší</value>
   </data>
   <data name="Connections_Free_Servers_One">
-    <value>Bezplatný server ({0})</value>
+    <value>Bezplatný server</value>
   </data>
   <data name="Connections_Free_Servers_Few">
-    <value>Bezplatných serverov ({0})</value>
+    <value>Bezplatné servery</value>
   </data>
   <data name="Connections_Free_Servers_Many">
-    <value>Bezplatných serverov ({0})</value>
+    <value>Bezplatných serverov</value>
   </data>
   <data name="Connections_Free_Servers_Other">
-    <value>Bezplatných serverov ({0})</value>
+    <value>Bezplatných serverov</value>
   </data>
   <data name="Connections_Gateway">
     <value>Brána</value>
@@ -525,16 +533,16 @@
     <value>P2P krajiny ({0})</value>
   </data>
   <data name="Connections_P2P_Servers_One">
-    <value>P2P server ({0})</value>
+    <value>P2P server</value>
   </data>
   <data name="Connections_P2P_Servers_Few">
-    <value>P2P servery ({0})</value>
+    <value>P2P servery</value>
   </data>
   <data name="Connections_P2P_Servers_Many">
-    <value>P2P servery ({0})</value>
+    <value>P2P serverov</value>
   </data>
   <data name="Connections_P2P_Servers_Other">
-    <value>P2P servery ({0})</value>
+    <value>P2P serverov</value>
   </data>
   <data name="Connections_P2P_States_One">
     <value>P2P štát({0})</value>
@@ -654,16 +662,16 @@
     <value>Krajiny so Secure Core ({0})</value>
   </data>
   <data name="Connections_SecureCore_Servers_One">
-    <value>Server Secure Core ({0})</value>
+    <value>Server Secure Core</value>
   </data>
   <data name="Connections_SecureCore_Servers_Few">
-    <value>Servery Secure Core ({0})</value>
+    <value>Servery Secure Core</value>
   </data>
   <data name="Connections_SecureCore_Servers_Many">
-    <value>Servery Secure Core ({0})</value>
+    <value>Serverov Secure Core</value>
   </data>
   <data name="Connections_SecureCore_Servers_Other">
-    <value>Servery Secure Core ({0})</value>
+    <value>Serverov Secure Core</value>
   </data>
   <data name="Connections_SeeCities_One">
     <value>Zobraziť mesto ({0})</value>
@@ -711,16 +719,16 @@
     <value>Na tomto serveri prebieha údržba</value>
   </data>
   <data name="Connections_Servers_One">
-    <value>Server ({0})</value>
+    <value>Server</value>
   </data>
   <data name="Connections_Servers_Few">
-    <value>Servery ({0})</value>
+    <value>Servery</value>
   </data>
   <data name="Connections_Servers_Many">
-    <value>Servery ({0})</value>
+    <value>Serverov</value>
   </data>
   <data name="Connections_Servers_Other">
-    <value>Servery ({0})</value>
+    <value>Serverov</value>
   </data>
   <data name="Connections_State">
     <value>Krajina</value>
@@ -758,16 +766,16 @@
     <value>Tor krajiny ({0})</value>
   </data>
   <data name="Connections_Tor_Servers_One">
-    <value>Tor server ({0})</value>
+    <value>Tor server</value>
   </data>
   <data name="Connections_Tor_Servers_Few">
-    <value>Tor servery ({0})</value>
+    <value>Tor servery</value>
   </data>
   <data name="Connections_Tor_Servers_Many">
-    <value>Tor servery ({0})</value>
+    <value>Tor serverov</value>
   </data>
   <data name="Connections_Tor_Servers_Other">
-    <value>Tor servery ({0})</value>
+    <value>Tor serverov</value>
   </data>
   <data name="Countries">
     <value>Krajiny</value>
@@ -2837,6 +2845,12 @@ Vysoké vyťaženie servera môže spomaliť vaše pripojenie.</value>
   <data name="Home_ConnectionDetails_Title">
     <value>Podrobnosti pripojenia</value>
   </data>
+  <data name="Home_ConnectionDetails_TwoFactorRequired_Description">
+    <value>Pre pokračovanie sa znovu overte v 2FA portáli vašej organizácie.</value>
+  </data>
+  <data name="Home_ConnectionDetails_TwoFactorRequired_Title">
+    <value>Platnosť 2FA vypršala</value>
+  </data>
   <data name="Home_ConnectionDetails_Unprotected">
     <value>Nechránené</value>
   </data>
@@ -3003,6 +3017,9 @@ Vysoké vyťaženie servera môže spomaliť vaše pripojenie.</value>
   </data>
   <data name="Login_Error_TwoFactorFailed">
     <value>Dvojstupňové overenie zlyhalo. Prihláste sa znova.</value>
+  </data>
+  <data name="Login_Error_WebAuthnNotSupported">
+    <value>Overovanie bezpečnostným kľúčom nie je k dispozícii pre vaše zariadenie alebo pripojenie k vzdialenej ploche.</value>
   </data>
   <data name="Login_TwoFactorForm_Authenticate">
     <value>Overiť</value>
@@ -3297,7 +3314,7 @@ Vysoké vyťaženie servera môže spomaliť vaše pripojenie.</value>
     <value>Otvoriť webovú stránku</value>
   </data>
   <data name="Profile_Options_Description">
-    <value>Po pripojení k tomuto profilu sa automaticky otvorí webová stránka podľa vášho výberu.</value>
+    <value>Pri pripojení k tomuto profilu automaticky otvorí webovú stránku alebo aplikáciu podľa vášho výberu.</value>
   </data>
   <data name="Profile_Options_Header">
     <value>Pripojiť a otvoriť</value>
