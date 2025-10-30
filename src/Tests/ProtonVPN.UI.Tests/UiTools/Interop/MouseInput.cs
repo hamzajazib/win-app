@@ -17,18 +17,18 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using Newtonsoft.Json;
+using System;
+using System.Runtime.InteropServices;
 
-namespace ProtonVPN.UI.Tests.ApiClient.Contracts;
+namespace ProtonVPN.UI.Tests.UiTools.Interop;
 
-public class AuthResponse
+[StructLayout(LayoutKind.Sequential)]
+internal struct MouseInput
 {
-    [JsonProperty(PropertyName = "UserID")]
-    public string UserId { get; set; } = string.Empty;
-
-    public string Scope { get; set; } = string.Empty;
-
-    public string ServerProof { get; set; } = string.Empty;
-    public string AccessToken { get; set; } = string.Empty;
-    public string UID { get; set; } = string.Empty;
+    public int Dx;
+    public int Dy;
+    public uint MouseData;
+    public uint DwFlags;
+    public uint Time;
+    public IntPtr DwExtraInfo;
 }

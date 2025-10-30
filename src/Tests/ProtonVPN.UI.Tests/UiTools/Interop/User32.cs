@@ -17,18 +17,21 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using Newtonsoft.Json;
+using System;
+using System.Runtime.InteropServices;
 
-namespace ProtonVPN.UI.Tests.ApiClient.Contracts;
+namespace ProtonVPN.UI.Tests.UiTools.Interop;
 
-public class AuthResponse
+internal static class User32
 {
-    [JsonProperty(PropertyName = "UserID")]
-    public string UserId { get; set; } = string.Empty;
+    internal const uint INPUT_MOUSE = 0;
+    internal const uint MOUSEEVENTF_MOVE = 0x0001;
+    internal const uint MOUSEEVENTF_ABSOLUTE = 0x8000;
+    internal const uint MOUSEEVENTF_VIRTUALDESK = 0x4000;
 
-    public string Scope { get; set; } = string.Empty;
+    [DllImport("user32.dll")]
+    internal static extern bool SetForegroundWindow(IntPtr hWnd);
 
-    public string ServerProof { get; set; } = string.Empty;
-    public string AccessToken { get; set; } = string.Empty;
-    public string UID { get; set; } = string.Empty;
+    [DllImport("user32.dll", SetLastError = true)]
+    internal static extern uint SendInput(uint nInputs, Input[] pInputs, int cbSize);    
 }

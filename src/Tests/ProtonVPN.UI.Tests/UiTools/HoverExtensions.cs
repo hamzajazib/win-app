@@ -17,18 +17,16 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using Newtonsoft.Json;
+using FlaUI.Core.AutomationElements;
+using ProtonVPN.UI.Tests.TestsHelper;
 
-namespace ProtonVPN.UI.Tests.ApiClient.Contracts;
+namespace ProtonVPN.UI.Tests.UiTools;
 
-public class AuthResponse
+public static class HoverExtensions
 {
-    [JsonProperty(PropertyName = "UserID")]
-    public string UserId { get; set; } = string.Empty;
-
-    public string Scope { get; set; } = string.Empty;
-
-    public string ServerProof { get; set; } = string.Empty;
-    public string AccessToken { get; set; } = string.Empty;
-    public string UID { get; set; } = string.Empty;
+    public static T HoverSmart<T>(this T element, int hoverDurationMs = TestConstants.DEFAULT_HOVER_DURATION_MS) where T : AutomationElement
+    {
+        NativeInput.HoverAbsolute(element, hoverDurationMs);
+        return element;
+    }
 }
