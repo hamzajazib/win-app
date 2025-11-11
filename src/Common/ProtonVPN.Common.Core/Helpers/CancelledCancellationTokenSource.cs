@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright (c) 2023 Proton AG
+ * Copyright (c) 2025 Proton AG
  *
  * This file is part of ProtonVPN.
  *
@@ -17,20 +17,21 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using System;
-using System.Threading.Tasks;
-using ProtonVPN.Common.Legacy;
-using ProtonVPN.Common.Legacy.PortForwarding;
-using ProtonVPN.Vpn.Common;
+namespace ProtonVPN.Common.Core.Helpers;
 
-namespace ProtonVPN.Vpn.PortMapping;
-
-public interface IPortMappingProtocolClient
+public static class CancelledCancellationTokenSource
 {
-    event EventHandler<EventArgs<PortForwardingState>> StateChanged;
+    public static CancellationTokenSource Create()
+    {
+        CancellationTokenSource cts = new();
+        cts.Cancel();
+        return cts;
+    }
 
-    Task StartAsync();
-    Task StopAsync();
-    void RepeatState();
-    void SetVpnState(VpnState state);
+    public static async Task<CancellationTokenSource> CreateAsync()
+    {
+        CancellationTokenSource cts = new();
+        await cts.CancelAsync();
+        return cts;
+    }
 }
