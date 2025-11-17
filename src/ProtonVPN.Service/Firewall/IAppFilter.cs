@@ -17,15 +17,12 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using System.Net;
+using System;
+using ProtonVPN.NetworkFilter;
 
-namespace ProtonVPN.Service.SplitTunneling;
+namespace ProtonVPN.Service.Firewall;
 
-public interface ISplitTunnelClient
+public interface IAppFilter : IFilterCollection
 {
-    void EnableExcludeMode(string[] appPaths, IPAddress localIpv4Address, IPAddress localIpv6Address);
-
-    void EnableIncludeMode(string[] appPaths, IPAddress serverIpv4Address, IPAddress serverIpv6Address);
-
-    void Disable();
+    void Add(string[] paths, Tuple<Layer, NetworkFilter.Action>[] filters);
 }
