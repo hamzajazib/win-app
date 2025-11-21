@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright (c) 2023 Proton AG
+ * Copyright (c) 2025 Proton AG
  *
  * This file is part of ProtonVPN.
  *
@@ -17,10 +17,9 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace ProtonVPN.Logging.Contracts.Categories
+namespace ProtonVPN.Logging.Contracts.Categories;
+
+public class SplitTunnelLogCategory : ILogCategory
 {
-    public class AppServiceLogCategory : ILogCategory
-    {
-        public string Category => "APP.SERVICE";
-    }
+    public string Category => "SPLIT.TUNNEL";
 }
