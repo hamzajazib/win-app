@@ -65,7 +65,7 @@
 .build-installer:
   stage: build-installer
   tags:
-    - windows-vpn-signer
+    - windows-vpn-signer-v1
   script:
     - python ci\build-scripts\main.py app-installer $env:CI_COMMIT_SHORT_SHA ${PLATFORM}
   artifacts:
