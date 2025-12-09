@@ -17,15 +17,11 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using ProtonVPN.Client.Common.Observers;
+namespace ProtonVPN.Api.Contracts.Features;
 
-namespace ProtonVPN.Client.Settings.Contracts.Observers;
-
-public interface IFeatureFlagsObserver : IObserver
+public class FeatureFlagVariantPayloadResponse
 {
-    bool IsIpv6SupportEnabled { get; }
-    bool IsLocalAreaNetworkAllowedForPaidUsersOnly { get; }
-    string U2FGatewayPortalUrl { get; }
+    public string Type { get; set; }
 
-    Task UpdateAsync(CancellationToken cancellationToken);
+    public string Value { get; set; }
 }
