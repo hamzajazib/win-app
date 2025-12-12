@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright (c) 2023 Proton AG
+ * Copyright (c) 2025 Proton AG
  *
  * This file is part of ProtonVPN.
  *
@@ -17,19 +17,15 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using System.Net;
+using static Vanara.PInvoke.Ws2_32;
 
-namespace ProtonVPN.OperatingSystems.Network.Contracts;
+namespace ProtonVPN.OperatingSystems.Network.Policies;
 
-public interface ISystemNetworkInterfaces
+public record AppliedInterfaceState
 {
-    event EventHandler NetworkAddressChanged;
-
-    INetworkInterface[] GetInterfaces();
-    INetworkInterface GetByDescription(string description);
-    INetworkInterface GetByName(string name);
-    INetworkInterface GetById(Guid id);
-    INetworkInterface GetByLocalAddress(IPAddress localAddress);
-    INetworkInterface GetBestInterfaceExcludingHardwareId(string hardwareIdToExclude);
-    NetworkConnectionType? GetNetworkConnectionType();
+    public ADDRESS_FAMILY Family;
+    public bool OriginalWeakHostSend;
+    public bool WasWeakHostSendModified;
+    public bool OriginalWeakHostReceive;
+    public bool WasWeakHostReceiveModified;
 }

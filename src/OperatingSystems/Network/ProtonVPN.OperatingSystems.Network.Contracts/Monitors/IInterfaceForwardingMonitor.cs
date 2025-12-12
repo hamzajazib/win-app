@@ -1,5 +1,5 @@
-﻿/*
- * Copyright (c) 2023 Proton AG
+/*
+ * Copyright (c) 2025 Proton AG
  *
  * This file is part of ProtonVPN.
  *
@@ -17,19 +17,12 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using System.Net;
+namespace ProtonVPN.OperatingSystems.Network.Contracts.Monitors;
 
-namespace ProtonVPN.OperatingSystems.Network.Contracts;
-
-public interface ISystemNetworkInterfaces
+public interface IInterfaceForwardingMonitor
 {
-    event EventHandler NetworkAddressChanged;
+    event EventHandler<InterfaceForwardingEventArgs> ForwardingEnabled;
 
-    INetworkInterface[] GetInterfaces();
-    INetworkInterface GetByDescription(string description);
-    INetworkInterface GetByName(string name);
-    INetworkInterface GetById(Guid id);
-    INetworkInterface GetByLocalAddress(IPAddress localAddress);
-    INetworkInterface GetBestInterfaceExcludingHardwareId(string hardwareIdToExclude);
-    NetworkConnectionType? GetNetworkConnectionType();
+    void Start();
+    void Stop();
 }
