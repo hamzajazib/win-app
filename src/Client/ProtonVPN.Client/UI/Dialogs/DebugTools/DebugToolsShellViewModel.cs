@@ -36,6 +36,7 @@ using ProtonVPN.Client.Logic.Users.Contracts.Messages;
 using ProtonVPN.Client.Settings.Contracts;
 using ProtonVPN.Client.UI.Dialogs.DebugTools.Models;
 using ProtonVPN.ProcessCommunication.Contracts.Entities.Vpn;
+using ProtonVPN.StatisticalEvents.Contracts;
 
 namespace ProtonVPN.Client.UI.Dialogs.DebugTools;
 
@@ -49,6 +50,7 @@ public partial class DebugToolsShellViewModel : ShellViewModelBase<IDebugToolsWi
     private readonly ISettings _settings;
     private readonly IEventMessageSender _eventMessageSender;
     private readonly IAppExitInvoker _appExitInvoker;
+    private readonly ISettingsHeartbeatStatisticalEventSender _settingsHeartbeatStatisticalEventSender;
 
     [ObservableProperty]
     private Overlay _selectedOverlay;
@@ -60,7 +62,7 @@ public partial class DebugToolsShellViewModel : ShellViewModelBase<IDebugToolsWi
     private VpnPlan _selectedVpnPlan;
 
     [ObservableProperty]
-    private int _xPosition; 
+    private int _xPosition;
     [ObservableProperty]
     private int _yPosition;
     [ObservableProperty]
@@ -90,7 +92,8 @@ public partial class DebugToolsShellViewModel : ShellViewModelBase<IDebugToolsWi
         IEventMessageSender eventMessageSender,
         IDebugToolsWindowActivator windowActivator,
         IViewModelHelper viewModelHelper,
-        IAppExitInvoker appExitInvoker)
+        IAppExitInvoker appExitInvoker,
+        ISettingsHeartbeatStatisticalEventSender settingsHeartbeatStatisticalEventSender)
         : base(windowActivator, viewModelHelper)
     {
         _serversUpdater = serversUpdater;
@@ -101,6 +104,7 @@ public partial class DebugToolsShellViewModel : ShellViewModelBase<IDebugToolsWi
         _settings = settings;
         _eventMessageSender = eventMessageSender;
         _appExitInvoker = appExitInvoker;
+        _settingsHeartbeatStatisticalEventSender = settingsHeartbeatStatisticalEventSender;
 
         OverlaysList =
         [
@@ -121,13 +125,36 @@ public partial class DebugToolsShellViewModel : ShellViewModelBase<IDebugToolsWi
     [RelayCommand]
     public async Task TriggerRestartAsync()
     {
-        await _appExitInvoker.RestartAsync();
+        // Trigger a client restart from a different thread to test the RestartAsync() method.
+        // The reason is that RestartAsync() releases the client mutex and that action requires thread-affinity.
+        Thread thread = new(async () => await _appExitInvoker.RestartAsync());
+        thread.Start();
+        thread.Join();
     }
 
     [RelayCommand]
-    public void TriggerClientCrash()
+    public void TriggerUiUnhandledException()
     {
-        throw new StackOverflowException("Intentional crash test");
+        throw new StackOverflowException("Intentional UI-thread crash test");
+    }
+
+    [RelayCommand]
+    public void TriggerAppDomainUnhandledException()
+    {
+        ThreadPool.QueueUserWorkItem(_ =>
+        {
+            throw new InvalidOperationException("Intentional AppDomain unhandled exception crash test");
+        });
+    }
+
+    [RelayCommand]
+    public async Task TriggerUnobservedTaskExceptionAsync()
+    {
+        _ = Task.Run(() => throw new Exception("Intentional unobserved task exception test"));
+        await Task.Delay(500);
+        GC.Collect();
+        GC.WaitForPendingFinalizers();
+        GC.Collect();
     }
 
     [RelayCommand]
@@ -251,5 +278,11 @@ public partial class DebugToolsShellViewModel : ShellViewModelBase<IDebugToolsWi
                 Width = DefaultSettings.WindowWidth,
                 Height = DefaultSettings.WindowHeight
             });
+    }
+
+    [RelayCommand]
+    public Task TriggerSettingsTelemetryHeartbeatAsync()
+    {
+        return _settingsHeartbeatStatisticalEventSender.SendAsync();
     }
 }

@@ -45,40 +45,43 @@ public class IssueReporter : IIssueReporter
         [CallerMemberName] string sourceMemberName = "",
         [CallerLineNumber] int sourceLineNumber = 0)
     {
+        CaptureException(SentryLevel.Error, e, sourceFilePath, sourceMemberName, sourceLineNumber);
+    }
+
+    private void CaptureException(SentryLevel level, Exception e, string sourceFilePath, string sourceMemberName, int sourceLineNumber)
+    {
         CallerProfile callerProfile = new(sourceFilePath, sourceMemberName, sourceLineNumber);
 
-        Tuple<CallerProfile, string> tuple = Tuple.Create(callerProfile, e.GetType()?.FullName);
-        if (!_exceptionsSent.Contains(tuple))
+        Tuple<CallerProfile, string?> tuple = Tuple.Create(callerProfile, e.GetType()?.FullName);
+        if (!_exceptionsSent.Contains(tuple!))
         {
             IEnumerable<string> fingerprint = GenerateExceptionFingerprint(e);
             SentrySdk.ConfigureScope(scope =>
             {
-                scope.Level = SentryLevel.Error;
-                scope.SetTag("captured_in",
-                    $"{callerProfile.SourceClassName}.{callerProfile.SourceMemberName}:{callerProfile.SourceLineNumber}");
-
+                scope.Level = level;
+                scope.SetTag("captured_in", $"{callerProfile.SourceClassName}.{callerProfile.SourceMemberName}:{callerProfile.SourceLineNumber}");
                 scope.SetFingerprint(fingerprint);
                 SentrySdk.CaptureException(e);
             });
-            _exceptionsSent.Add(tuple);
+            _exceptionsSent.Add(tuple!);
         }
     }
 
     private IEnumerable<string> GenerateExceptionFingerprint(Exception e)
     {
-        string exceptionTypeName = string.Empty;
-        string classFullName = string.Empty;
-        string methodName = string.Empty;
+        string? exceptionTypeName = string.Empty;
+        string? classFullName = string.Empty;
+        string? methodName = string.Empty;
         int? line = null;
-        
+
         try
         {
             exceptionTypeName = e.GetType()?.FullName;
             StackTrace stackTrace = new(e, true);
             for (int i = 0; i < stackTrace.FrameCount; i++)
             {
-                StackFrame frame = stackTrace.GetFrame(i);
-                MethodBase method = frame?.GetMethod();
+                StackFrame? frame = stackTrace.GetFrame(i);
+                MethodBase? method = frame?.GetMethod();
                 classFullName = method?.DeclaringType?.FullName;
                 methodName = method?.Name;
                 line = frame?.GetFileLineNumber();
@@ -101,15 +104,15 @@ public class IssueReporter : IIssueReporter
         yield return $"Line: {line}";
     }
 
-    public void CaptureError(string message, string description = null)
+    public void CaptureError(string message, string? description = null)
     {
         CaptureMessage(SentryLevel.Error, message, description);
     }
 
-    private void CaptureMessage(SentryLevel level, string message, string description)
+    private void CaptureMessage(SentryLevel level, string message, string? description)
     {
-        Tuple<SentryLevel, string, string> tuple = Tuple.Create(level, message, description);
-        if (!_messagesSent.Contains(tuple))
+        Tuple<SentryLevel, string, string?> tuple = Tuple.Create(level, message, description);
+        if (!_messagesSent.Contains(tuple!))
         {
             SentrySdk.ConfigureScope(scope =>
             {
@@ -123,11 +126,11 @@ public class IssueReporter : IIssueReporter
                 scope.SetFingerprint([message]);
                 SentrySdk.CaptureMessage(message);
             });
-            _messagesSent.Add(tuple);
+            _messagesSent.Add(tuple!);
         }
     }
 
-    public void CaptureMessage(string message, string description = null)
+    public void CaptureMessage(string message, string? description = null)
     {
         CaptureMessage(SentryLevel.Info, message, description);
     }

@@ -2418,10 +2418,13 @@
     <value>Some websites may not load properly when ads and trackers are blocked.</value>
   </data>
   <data name="Settings_Connection_PortForwarding_ActivePort" xml:space="preserve">
-    <value>Active port:</value>
+    <value>Active port number:</value>
   </data>
   <data name="Settings_Connection_PortForwarding_Loading" xml:space="preserve">
     <value>Loading...</value>
+  </data>
+  <data name="Settings_Connection_PortForwarding_Unavailable" xml:space="preserve">
+    <value>Unavailable</value>
   </data>
   <data name="Settings_Connection_PortForwarding_ActivePort_Copy" xml:space="preserve">
     <value>Copy port number</value>
@@ -2448,6 +2451,9 @@
   </data>
   <data name="Settings_Connection_SplitTunneling_Apps_Remove" xml:space="preserve">
     <value>Remove app</value>
+  </data>
+  <data name="Settings_Connection_SplitTunneling_Apps_NotFound" xml:space="preserve">
+    <value>Application not found</value>
   </data>
   <data name="Settings_Connection_SplitTunneling_Description" xml:space="preserve">
     <value>Customize your connection by deciding which apps and IP addresses are protected by VPN.</value>
@@ -2502,12 +2508,6 @@
   <data name="Settings_Connection_Advanced_CustomDnsServers_Conflict_Title" xml:space="preserve">
     <value>Enable custom DNS servers?</value>
   </data>
-  <data name="Settings_Connection_KillSwitch_Conflict_Description" xml:space="preserve">
-    <value>This will disable split tunneling.</value>
-  </data>
-  <data name="Settings_Connection_KillSwitch_Conflict_Title" xml:space="preserve">
-    <value>Enable kill switch?</value>
-  </data>
   <data name="Settings_Connection_NetShield_Conflict_Information" xml:space="preserve">
     <value>NetShield is not compatible with Custom DNS.</value>
   </data>
@@ -2531,12 +2531,6 @@
   </data>
   <data name="Settings_Connection_NetShield_BlockAdsMalwareTrackers" xml:space="preserve">
     <value>Block ads, malware and trackers</value>
-  </data>
-  <data name="Settings_Connection_SplitTunneling_Conflict_Description" xml:space="preserve">
-    <value>This will disable kill switch.</value>
-  </data>
-  <data name="Settings_Connection_SplitTunneling_Conflict_Title" xml:space="preserve">
-    <value>Enable split tunneling?</value>
   </data>
   <data name="Settings_Connection_Advanced_NatType_Conflict_Description" xml:space="preserve">
     <value>You won't be able to use port forwarding with Moderate NAT.</value>
@@ -2842,7 +2836,7 @@
     <comment>The message displayed in Login window when expired session is detected</comment>
   </data>
   <data name="Notifications_PortForwarding_Description" xml:space="preserve">
-    <value>Set this number in your BitTorrent app for greater speed.</value>
+    <value>Go to your torrent client or P2P app and enter this number.</value>
   </data>
   <data name="Notifications_PortForwarding_CopyPortNumber" xml:space="preserve">
     <value>Copy port number</value>
@@ -4103,7 +4097,10 @@
     <value>Active port number</value>
   </data>
   <data name="Flyouts_PortForwarding_ActivePort_Info" xml:space="preserve">
-    <value>Enter the active port number into your BitTorrent app to improve your P2P speeds</value>
+    <value>Enter the active port number into your torrent client or P2P app for enhanced performance.</value>
+  </data>
+  <data name="Flyouts_PortForwarding_ActivePort_Error" xml:space="preserve">
+    <value>Cannot retrieve active port number. Restart your connection and try again.</value>
   </data>
   <data name="Flyouts_PortForwarding_Warning" xml:space="preserve">
     <value>Connect to a P2P server to improve torrenting speeds</value>
