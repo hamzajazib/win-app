@@ -38,7 +38,7 @@ internal class Firewall : IFirewall, IStartable
     private const int LOCAL_TRAFFIC_WEIGHT = 2;
 
     private readonly ILogger _logger;
-    private readonly IDriver _calloutDriver;
+    private readonly ICalloutDriver _calloutDriver;
     private readonly IStaticConfiguration _staticConfig;
     private readonly IpLayer _ipLayer;
     private readonly IpFilter _ipFilter;
@@ -56,7 +56,7 @@ internal class Firewall : IFirewall, IStartable
 
     public Firewall(
         ILogger logger,
-        IDriver calloutDriver,
+        ICalloutDriver calloutDriver,
         IStaticConfiguration staticConfig,
         IpLayer ipLayer,
         IpFilter ipFilter,
@@ -176,6 +176,15 @@ internal class Firewall : IFirewall, IStartable
 
             RemoveItems(previousFilters, _lastParams.SessionType);
             RemoveItems(previousInterfaceFilters, _lastParams.SessionType);
+        }
+
+        if (_lastParams.SessionType == SessionType.Permanent &&
+            firewallParams.SessionType == SessionType.Dynamic)
+        {
+            // When downgrading from persistent (advanced kill switch) to dynamic filters, wipe any
+            // leftover permanent rules that might have been created in a previous session and are
+            // not tracked in-memory (e.g., after an app restart).
+            _ipFilter.PermanentSublayer.DestroyAllFilters();
         }
 
         if (firewallParams.AddInterfaceFilters && firewallParams.InterfaceIndex != _lastParams.InterfaceIndex)
