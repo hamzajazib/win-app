@@ -17,6 +17,16 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace ProtonVPN.Client.Logic.Connection.Contracts.Messages;
+using System.Runtime.Serialization;
 
-public class P2PTrafficDetectedMessage;
+namespace ProtonVPN.ProcessCommunication.Contracts.Entities.Restrictions;
+
+[DataContract]
+public enum RestrictionIpcEntity
+{
+    [EnumMember]
+    Bittorrenting,
+
+    [EnumMember]
+    Streaming,
+}

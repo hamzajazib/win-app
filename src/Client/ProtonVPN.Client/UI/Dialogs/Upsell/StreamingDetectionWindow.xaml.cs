@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Copyright (c) 2025 Proton AG
  *
  * This file is part of ProtonVPN.
@@ -17,40 +17,32 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace ProtonVPN.StatisticalEvents.Contracts;
+using ProtonVPN.Client.Core.Bases;
+using ProtonVPN.Client.Core.Extensions;
+using ProtonVPN.Client.Services.Activation;
 
-public enum ModalSource
+namespace ProtonVPN.Client.UI.Dialogs.Upsell;
+
+public sealed partial class StreamingDetectionWindow : IFocusAware
 {
-    Undefined,
-    SecureCore,
-    NetShield,
-    Countries,
-    P2P,
-    P2PActivity,
-    Streaming,
-    StreamingActivity,
-    PortForwarding,
-    Profiles,
-    VpnAccelerator,
-    SplitTunneling,
-    CustomDns,
-    AllowLanConnections,
-    ModerateNat,
-    ChangeServer,
-    PromoOffer,
-    Downgrade,
-    MaxConnections,
-    CarouselCountries,
-    CarouselCustomization,
-    CarouselMultipleDevices,
-    CarouselNetShield,
-    CarouselP2P,
-    CarouselSecureCore,
-    CarouselSpeed,
-    CarouselSplitTunneling,
-    CarouselStreaming,
-    CarouselTor,
-    Account,
-    Tor,
-    Tray
-}          
+    public StreamingDetectionWindowActivator WindowActivator { get; }
+
+    public StreamingDetectionWindow()
+    {
+        WindowActivator = App.GetService<StreamingDetectionWindowActivator>();
+
+        InitializeComponent();
+
+        WindowActivator.Initialize(this);
+    }
+
+    public void OnFocusChanged()
+    {
+        WindowContainer.TitleBarOpacity = this.GetTitleBarOpacity();
+    }
+
+    public bool IsFocused()
+    {
+        return WindowActivator.IsWindowFocused;
+    }
+}

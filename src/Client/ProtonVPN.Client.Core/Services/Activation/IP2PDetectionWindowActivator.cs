@@ -17,6 +17,8 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace ProtonVPN.Client.Logic.Connection.Contracts.Messages;
+using ProtonVPN.Client.Contracts.Services.Activation.Bases;
 
-public class P2PTrafficDetectedMessage;
+namespace ProtonVPN.Client.Core.Services.Activation;
+
+public interface IP2PDetectionWindowActivator : IWindowActivator;

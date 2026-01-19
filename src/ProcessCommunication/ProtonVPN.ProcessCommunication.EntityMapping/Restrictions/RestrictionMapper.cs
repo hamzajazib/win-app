@@ -17,6 +17,21 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace ProtonVPN.Client.Logic.Connection.Contracts.Messages;
+using ProtonVPN.Common.Legacy.Restrictions;
+using ProtonVPN.EntityMapping.Contracts;
+using ProtonVPN.ProcessCommunication.Contracts.Entities.Restrictions;
 
-public class P2PTrafficDetectedMessage;
+namespace ProtonVPN.ProcessCommunication.EntityMapping.Restrictions;
+
+public class RestrictionMapper : IMapper<Restriction, RestrictionIpcEntity>
+{
+    public RestrictionIpcEntity Map(Restriction leftEntity)
+    {
+        return (RestrictionIpcEntity)leftEntity;
+    }
+
+    public Restriction Map(RestrictionIpcEntity rightEntity)
+    {
+        return (Restriction)rightEntity;
+    }
+}

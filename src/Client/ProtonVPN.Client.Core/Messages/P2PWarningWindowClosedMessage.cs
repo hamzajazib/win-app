@@ -17,6 +17,6 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace ProtonVPN.Client.Logic.Connection.Contracts.Messages;
+namespace ProtonVPN.Client.Core.Messages;
 
-public class P2PTrafficDetectedMessage;
+public class P2PWarningWindowClosedMessage;

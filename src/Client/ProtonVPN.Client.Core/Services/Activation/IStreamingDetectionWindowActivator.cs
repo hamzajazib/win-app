@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Copyright (c) 2025 Proton AG
  *
  * This file is part of ProtonVPN.
@@ -17,6 +17,8 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace ProtonVPN.Client.Logic.Connection.Contracts.Messages;
+using ProtonVPN.Client.Contracts.Services.Activation.Bases;
 
-public class P2PTrafficDetectedMessage;
+namespace ProtonVPN.Client.Core.Services.Activation;
+
+public interface IStreamingDetectionWindowActivator : IWindowActivator;

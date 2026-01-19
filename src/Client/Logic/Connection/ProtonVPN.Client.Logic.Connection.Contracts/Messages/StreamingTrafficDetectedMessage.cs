@@ -19,4 +19,4 @@
 
 namespace ProtonVPN.Client.Logic.Connection.Contracts.Messages;
 
-public class P2PTrafficDetectedMessage;
+public class StreamingTrafficDetectedMessage;

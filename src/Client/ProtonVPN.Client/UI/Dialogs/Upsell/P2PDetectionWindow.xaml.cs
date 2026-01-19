@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Copyright (c) 2025 Proton AG
  *
  * This file is part of ProtonVPN.
@@ -17,6 +17,32 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace ProtonVPN.Client.Logic.Connection.Contracts.Messages;
+using ProtonVPN.Client.Core.Bases;
+using ProtonVPN.Client.Core.Extensions;
+using ProtonVPN.Client.Services.Activation;
 
-public class P2PTrafficDetectedMessage;
+namespace ProtonVPN.Client.UI.Dialogs.Upsell;
+
+public sealed partial class P2PDetectionWindow : IFocusAware
+{
+    public P2PDetectionWindowActivator WindowActivator { get; }
+
+    public P2PDetectionWindow()
+    {
+        WindowActivator = App.GetService<P2PDetectionWindowActivator>();
+
+        InitializeComponent();
+
+        WindowActivator.Initialize(this);
+    }
+
+    public void OnFocusChanged()
+    {
+        WindowContainer.TitleBarOpacity = this.GetTitleBarOpacity();
+    }
+
+    public bool IsFocused()
+    {
+        return WindowActivator.IsWindowFocused;
+    }
+}

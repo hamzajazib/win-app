@@ -17,6 +17,11 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace ProtonVPN.Client.Logic.Connection.Contracts.Messages;
+using System.Collections.Generic;
 
-public class P2PTrafficDetectedMessage;
+namespace ProtonVPN.Common.Legacy.Restrictions;
+
+public class RestrictionsList
+{
+    public List<Restriction> Restrictions { get; set; }
+}
