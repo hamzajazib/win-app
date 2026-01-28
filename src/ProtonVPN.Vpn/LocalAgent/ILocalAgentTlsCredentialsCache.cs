@@ -17,12 +17,15 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace ProtonVPN.Client.Logic.Auth.Contracts.Models;
+using System;
+using ProtonVPN.Common.Legacy;
 
-public readonly struct ConnectionCertificate
+namespace ProtonVPN.Vpn.LocalAgent;
+
+public interface ILocalAgentTlsCredentialsCache
 {
-    public required string Pem { get; init; }
-    public required DateTimeOffset RequestUtcDate { get; init; }
-    public required DateTimeOffset RefreshUtcDate { get; init; }
-    public required DateTimeOffset ExpirationUtcDate { get; init; }
+    void Set(LocalAgentTlsCredentials credentials);
+    LocalAgentTlsCredentials Get();
+
+    event EventHandler<EventArgs<LocalAgentTlsCredentials>> Changed;
 }

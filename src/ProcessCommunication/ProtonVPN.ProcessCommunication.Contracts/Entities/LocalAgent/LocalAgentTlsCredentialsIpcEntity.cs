@@ -17,12 +17,17 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace ProtonVPN.Client.Logic.Auth.Contracts.Models;
+using System.Runtime.Serialization;
+using ProtonVPN.ProcessCommunication.Contracts.Entities.Crypto;
 
-public readonly struct ConnectionCertificate
+namespace ProtonVPN.ProcessCommunication.Contracts.Entities.LocalAgent;
+
+[DataContract]
+public class LocalAgentTlsCredentialsIpcEntity
 {
-    public required string Pem { get; init; }
-    public required DateTimeOffset RequestUtcDate { get; init; }
-    public required DateTimeOffset RefreshUtcDate { get; init; }
-    public required DateTimeOffset ExpirationUtcDate { get; init; }
+    [DataMember(Order = 1, IsRequired = true)]
+    public ConnectionCertificateIpcEntity ConnectionCertificate { get; set; }
+
+    [DataMember(Order = 2, IsRequired = true)]
+    public AsymmetricKeyPairIpcEntity ClientKeyPair { get; set; }
 }
