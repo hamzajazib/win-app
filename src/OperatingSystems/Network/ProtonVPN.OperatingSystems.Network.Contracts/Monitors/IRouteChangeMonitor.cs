@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Copyright (c) 2026 Proton AG
  *
  * This file is part of ProtonVPN.
@@ -17,19 +17,12 @@
  * along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using ProtonVPN.Client.Common.Observers;
+namespace ProtonVPN.OperatingSystems.Network.Contracts.Monitors;
 
-namespace ProtonVPN.Client.Settings.Contracts.Observers;
-
-public interface IFeatureFlagsObserver : IObserver
+public interface IRouteChangeMonitor
 {
-    bool IsIpv6SupportEnabled { get; }
-    bool IsLocalAreaNetworkAllowedForPaidUsersOnly { get; }
-    bool ShouldDisableWeakHostSetting { get; }
-    bool IsServerListTruncationEnabled { get; }
-    string U2FGatewayPortalUrl { get; }
-    bool IsBinaryServerStatusEnabled { get; }
-    bool IsWireGuardServerRouteEnabled { get; }
+    event EventHandler<RouteChangeEventArgs> RouteChanged;
 
-    Task UpdateAsync(CancellationToken cancellationToken);
+    void Start();
+    void Stop();
 }
