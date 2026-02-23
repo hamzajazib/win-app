@@ -342,6 +342,9 @@
   <data name="Connection_Error_MissingConnectionCertificate">
     <value>Proton VPN konnte das Authentifizierungszertifikat aufgrund eines Netzwerkproblems nicht abrufen.</value>
   </data>
+  <data name="Connection_Error_MobileHotspotEnabled">
+    <value>Es ist nicht möglich, eine Verbindung zum VPN herzustellen, während du dein Gerät als mobilen Hotspot verwendest. Deaktiviere den mobilen Hotspot und versuche es erneut.</value>
+  </data>
   <data name="Connection_Error_NoServers">
     <value>Alle Server in deiner Auswahl sind nicht verfügbar. Bitte erweitere deine Auswahl oder versuche es später erneut.</value>
   </data>
@@ -351,6 +354,9 @@
   </data>
   <data name="Connection_Error_NoTapAdapters">
     <value>Kein Netzwerkadapter verfügbar.</value>
+  </data>
+  <data name="Connection_Error_OpenMobileHotspotSettings">
+    <value>Einstellungen für mobilen Hotspot öffnen</value>
   </data>
   <data name="Connection_Error_ReportAnIssue">
     <value>Ein Problem melden</value>
@@ -2789,6 +2795,9 @@ Eine hohe Serverauslastung kann Ihre Verbindung verlangsamen.</value>
   <data name="Login_Error_GetSessionDetailsFailed">
     <value>Fehler beim Abrufen der Sitzungsdetails. Bitte versuche es erneut.</value>
   </data>
+  <data name="Login_Error_GuestHoleFailedDueToMobileHotspot">
+    <value>Es ist nicht möglich, sich anzumelden, während du dein Gerät als mobilen Hotspot nutzt. Deaktiviere den mobilen Hotspot und versuche es erneut.</value>
+  </data>
   <data name="Login_Error_IncorrectTwoFactorCode">
     <value>Ungültiger Code. Bitte versuche es erneut.</value>
   </data>
@@ -3333,7 +3342,7 @@ Eine hohe Serverauslastung kann deine Verbindung verlangsamen.</value>
     <value>Ermöglicht Verbindungen zu Druckern, Lautsprechern und anderen Geräten im lokalen Netzwerk.</value>
   </data>
   <data name="Settings_Connection_Advanced_LanConnections_LocalDns_Description">
-    <value>Verbinde dich mit Geräten über Namen wie „Mein-Drucker“ oder „router.local“ anstatt über IP-Adressen. Nutzt lokale DNS-Auflösung. Standardmäßig deaktiviert, um schnellere VPN-Geschwindigkeiten gewährleisten zu können.</value>
+    <value>Nutzt mDNS, um sich mit Geräten über Namen wie „Mein-Drucker“ oder „router.local“ anstelle von IP-Adressen zu verbinden. Standard-DNS wird weiterhin durch den VPN-Tunnel geleitet. Standardmäßig deaktiviert, um schnellere VPN-Geschwindigkeiten zu ermöglichen.</value>
   </data>
   <data name="Settings_Connection_Advanced_LanConnections_LocalDns_Title">
     <value>Zugriff auf Geräte mit deren Namen</value>

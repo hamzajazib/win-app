@@ -342,6 +342,9 @@
   <data name="Connection_Error_MissingConnectionCertificate">
     <value>Proton VPN gagal mengambil sertifikat autentikasi karena masalah jaringan.</value>
   </data>
+  <data name="Connection_Error_MobileHotspotEnabled">
+    <value>VPN tidak dapat dihubungkan pada saat perangkat Anda digunakan sebagai hotspot seluler. Nonaktifkan hotspot seluler dan coba lagi.</value>
+  </data>
   <data name="Connection_Error_NoServers">
     <value>Seluruh server dalam rentang pilihan Anda sedang tidak tersedia. Silakan perluas pilihan Anda atau coba lagi nanti.</value>
   </data>
@@ -351,6 +354,9 @@
   </data>
   <data name="Connection_Error_NoTapAdapters">
     <value>Adaptor jaringan tidak ditemukan.</value>
+  </data>
+  <data name="Connection_Error_OpenMobileHotspotSettings">
+    <value>Buka pengaturan hotspot seluler</value>
   </data>
   <data name="Connection_Error_ReportAnIssue">
     <value>Laporkan masalah</value>
@@ -2681,6 +2687,9 @@ Muatan server yang tinggi dapat memperlambat koneksi Anda.</value>
   <data name="Login_Error_GetSessionDetailsFailed">
     <value>Terjadi kesalahan saat menerima detail sesi. Silakan coba lagi.</value>
   </data>
+  <data name="Login_Error_GuestHoleFailedDueToMobileHotspot">
+    <value>Anda tidak dapat masuk pada saat perangkat Anda digunakan sebagai hotspot seluler. Nonaktifkan hotspot seluler dan coba lagi.</value>
+  </data>
   <data name="Login_Error_IncorrectTwoFactorCode">
     <value>Kode salah. Silakan coba lagi.</value>
   </data>
@@ -3225,7 +3234,7 @@ Muatan server yang tinggi dapat memperlambat koneksi Anda.</value>
     <value>Memungkinkan koneksi ke printer, speaker, dan perangkat lainnya di jaringan lokal Anda.</value>
   </data>
   <data name="Settings_Connection_Advanced_LanConnections_LocalDns_Description">
-    <value>Menghubungkan Anda ke perangkat eksternal dengan menggunakan nama seperti "My.Printer" atau "router.local" alih-alih alamat IP milik perangkat. Fitur ini menggunakan resolusi DNS lokal, dan dinonaktifkan secara bawaan untuk menjaga kecepatan VPN yang lebih cepat.</value>
+    <value>Gunakan mDNS untuk dapat terhubung ke perangkat lain dengan menggunakan nama khusus seperti 'Printer Saya' atau 'router.local' alih-alih alamat IP Anda. DNS standar akan tetap dirutekan melalui terowongan VPN. Dinonaktifkan secara bawaan untuk kecepatan VPN yang lebih tinggi.</value>
   </data>
   <data name="Settings_Connection_Advanced_LanConnections_LocalDns_Title">
     <value>Akses perangkat berdasarkan nama</value>
@@ -3403,7 +3412,7 @@ Muatan server yang tinggi dapat memperlambat koneksi Anda.</value>
     <comment>Header for the list of Apps defined for Split Tunneling. {0} is a placeholder for the number of selected apps in the list. (eg. "Selected apps (2)")</comment>
   </data>
   <data name="Settings_Connection_SplitTunneling_Apps_NotFound">
-    <value>Application not found</value>
+    <value>Aplikasi tidak ditemukan</value>
   </data>
   <data name="Settings_Connection_SplitTunneling_Apps_Remove">
     <value>Hapus aplikasi</value>

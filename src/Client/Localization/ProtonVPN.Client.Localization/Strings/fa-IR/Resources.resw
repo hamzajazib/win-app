@@ -342,6 +342,9 @@
   <data name="Connection_Error_MissingConnectionCertificate">
     <value>بدلیل مشکلات شبکه Proton VPN قادر به دریافت گواهینامه تایید تعیین اعتبار نیست.</value>
   </data>
+  <data name="Connection_Error_MobileHotspotEnabled">
+    <value>It is not possible to connect to VPN while using your device as a mobile hotspot. Disable mobile hotspot and try again.</value>
+  </data>
   <data name="Connection_Error_NoServers">
     <value>All servers in your selection are unavailable. Please expand your selection or try again later.</value>
   </data>
@@ -351,6 +354,9 @@
   </data>
   <data name="Connection_Error_NoTapAdapters">
     <value>آداپتور شبکه موجود نیست.</value>
+  </data>
+  <data name="Connection_Error_OpenMobileHotspotSettings">
+    <value>Open mobile hotspot settings</value>
   </data>
   <data name="Connection_Error_ReportAnIssue">
     <value>گزارش یک اشکال</value>
@@ -2789,6 +2795,9 @@ Error code: {0}</value>
   <data name="Login_Error_GetSessionDetailsFailed">
     <value>در هنگام بازیابی جزئیات جلسه خطایی رخ داد. لطفاً دوباره امتحان کنید.</value>
   </data>
+  <data name="Login_Error_GuestHoleFailedDueToMobileHotspot">
+    <value>It is not possible to sign in while using your device as a mobile hotspot. Disable mobile hotspot and try again.</value>
+  </data>
   <data name="Login_Error_IncorrectTwoFactorCode">
     <value>کد نادرست است. لطفا دوباره امتحان کنید.</value>
   </data>
@@ -3333,7 +3342,7 @@ Secure Core</value>
     <value>Allows connections to printers, speakers, and other devices in your local network.</value>
   </data>
   <data name="Settings_Connection_Advanced_LanConnections_LocalDns_Description">
-    <value>Connect to devices using names like 'My-Printer' or 'router.local' instead of IP addresses. Uses local DNS resolution. Disabled by default to maintain faster VPN speeds.</value>
+    <value>Uses mDNS to connect to devices using names like 'My-Printer' or 'router.local' instead of IP addresses. Standard DNS continues to be routed through the VPN tunnel. Disabled by default for faster VPN speeds.</value>
   </data>
   <data name="Settings_Connection_Advanced_LanConnections_LocalDns_Title">
     <value>Access devices by name</value>

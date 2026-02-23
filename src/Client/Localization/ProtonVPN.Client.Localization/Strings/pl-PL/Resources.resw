@@ -342,6 +342,9 @@
   <data name="Connection_Error_MissingConnectionCertificate">
     <value>Aplikacja Proton VPN nie może pobrać certyfikatu uwierzytelniania z powodu problemu z siecią.</value>
   </data>
+  <data name="Connection_Error_MobileHotspotEnabled">
+    <value>It is not possible to connect to VPN while using your device as a mobile hotspot. Disable mobile hotspot and try again.</value>
+  </data>
   <data name="Connection_Error_NoServers">
     <value>Wszystkie wybrane serwery są niedostępne. Rozszerz zakres dostępnych serwerów lub spróbuj ponownie później.</value>
   </data>
@@ -351,6 +354,9 @@
   </data>
   <data name="Connection_Error_NoTapAdapters">
     <value>Brak adaptera sieciowego.</value>
+  </data>
+  <data name="Connection_Error_OpenMobileHotspotSettings">
+    <value>Open mobile hotspot settings</value>
   </data>
   <data name="Connection_Error_ReportAnIssue">
     <value>Zgłoś problem</value>
@@ -3005,6 +3011,9 @@ Duże obciążenie serwera może spowolnić połączenie.</value>
   <data name="Login_Error_GetSessionDetailsFailed">
     <value>Wystąpił błąd podczas pobierania szczegółów sesji. Spróbuj ponownie.</value>
   </data>
+  <data name="Login_Error_GuestHoleFailedDueToMobileHotspot">
+    <value>It is not possible to sign in while using your device as a mobile hotspot. Disable mobile hotspot and try again.</value>
+  </data>
   <data name="Login_Error_IncorrectTwoFactorCode">
     <value>Kod jest niepoprawny. Spróbuj ponownie.</value>
   </data>
@@ -3549,7 +3558,7 @@ Duże obciążenie serwera może spowolnić połączenie.</value>
     <value>Umożliwia połączenie z drukarkami, głośnikami i innymi urządzeniami w sieci lokalnej urządzenia.</value>
   </data>
   <data name="Settings_Connection_Advanced_LanConnections_LocalDns_Description">
-    <value>Connect to devices using names like 'My-Printer' or 'router.local' instead of IP addresses. Uses local DNS resolution. Disabled by default to maintain faster VPN speeds.</value>
+    <value>Uses mDNS to connect to devices using names like 'My-Printer' or 'router.local' instead of IP addresses. Standard DNS continues to be routed through the VPN tunnel. Disabled by default for faster VPN speeds.</value>
   </data>
   <data name="Settings_Connection_Advanced_LanConnections_LocalDns_Title">
     <value>Access devices by name</value>

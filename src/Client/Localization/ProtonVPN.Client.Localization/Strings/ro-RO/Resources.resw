@@ -342,6 +342,9 @@
   <data name="Connection_Error_MissingConnectionCertificate">
     <value>Proton VPN a eșuat să preia certificatul de autentificare datorită problemelor de rețea.</value>
   </data>
+  <data name="Connection_Error_MobileHotspotEnabled">
+    <value>Nu este posibil să vă conectați la VPN în timp ce utilizați dispozitivul ca hotspot mobil. Dezactivați hotspot-ul mobil și reîncercați.</value>
+  </data>
   <data name="Connection_Error_NoServers">
     <value>Toate serverele din selecție nu sunt disponibile. Extindeți selecția și reîncercați.</value>
   </data>
@@ -351,6 +354,9 @@
   </data>
   <data name="Connection_Error_NoTapAdapters">
     <value>Adaptorul de rețea lipsește.</value>
+  </data>
+  <data name="Connection_Error_OpenMobileHotspotSettings">
+    <value>Deschidere setări hotspot mobil</value>
   </data>
   <data name="Connection_Error_ReportAnIssue">
     <value>Raportare o problemă</value>
@@ -2897,6 +2903,9 @@ O sarcină mare a serverului vă poate încetini conexiunea.</value>
   <data name="Login_Error_GetSessionDetailsFailed">
     <value>A apărut o eroare la preluarea detaliilor sesiunii. Reîncercați.</value>
   </data>
+  <data name="Login_Error_GuestHoleFailedDueToMobileHotspot">
+    <value>Nu este posibil să vă conectați la cont în timp ce utilizați dispozitivul ca hotspot mobil. Dezactivați hotspot-ul mobil și reîncercați.</value>
+  </data>
   <data name="Login_Error_IncorrectTwoFactorCode">
     <value>Cod incorect. Reîncercați.</value>
   </data>
@@ -3441,7 +3450,7 @@ O solicitare mare a serverului vă poate încetini conexiunea.</value>
     <value>Permite conexiuni către imprimante, boxe și alte dispozitive din rețeaua locală.</value>
   </data>
   <data name="Settings_Connection_Advanced_LanConnections_LocalDns_Description">
-    <value>Conectați-vă la dispozitive folosind denumiri precum „Imprimanta-mea” sau „ruter.local” în loc de adrese IP. Utilizează rezoluția DNS locală. Dezactivată implicit pentru a menține viteze VPN mai rapide.</value>
+    <value>Utilizați mDNS pentru a vă conecta la dispozitive folosind denumiri precum „Imprimanta-mea” sau „ruter.local” în loc de adrese IP. DNS-ul standard continuă să fie direcționat prin tunelul VPN. Funcție dezactivată implicit pentru viteze VPN mai rapide.</value>
   </data>
   <data name="Settings_Connection_Advanced_LanConnections_LocalDns_Title">
     <value>Accesare dispozitive după nume</value>

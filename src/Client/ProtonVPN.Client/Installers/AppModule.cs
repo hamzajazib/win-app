@@ -48,6 +48,7 @@ using ProtonVPN.Client.Services.Bootstrapping.Activators;
 using ProtonVPN.Client.Services.Browsing;
 using ProtonVPN.Client.Services.Dispatching;
 using ProtonVPN.Client.Services.Edition;
+using ProtonVPN.Client.Services.Deeplinks;
 using ProtonVPN.Client.Services.Enabling;
 using ProtonVPN.Client.Services.Lifecycle;
 using ProtonVPN.Client.Services.Mapping;
@@ -238,6 +239,7 @@ public class AppModule : Module
         builder.RegisterType<HumanVerifier>().AsImplementedInterfaces().SingleInstance();
         builder.RegisterType<HumanVerificationConfig>().AsImplementedInterfaces().SingleInstance();
         builder.RegisterType<UrlsBrowser>().AsImplementedInterfaces().SingleInstance();
+        builder.RegisterType<DeepLinksService>().AsImplementedInterfaces().SingleInstance();
         builder.RegisterType<FilesBrowser>().AsImplementedInterfaces().SingleInstance();
         builder.RegisterType<AccountUpgradeUrlLauncher>().AsImplementedInterfaces().SingleInstance();
         builder.RegisterType<ClipboardEditor>().AsImplementedInterfaces().SingleInstance();
@@ -377,7 +379,7 @@ public class AppModule : Module
         RegisterViewModel<CensorshipSettingsPageViewModel>(builder);
         RegisterViewModel<AutoStartupSettingsPageViewModel>(builder);
         RegisterViewModel<SideWidgetsHostComponentViewModel>(builder);
-        RegisterViewModel<VpnSpeedViewModel>(builder);
+        RegisterViewModel<SpeedChartComponentViewModel>(builder);
         RegisterViewModel<ConnectionIntentSelectorViewModel>(builder);
         RegisterViewModel<ProfileIconSelectorViewModel>(builder);
         RegisterViewModel<ProfileSettingsSelectorViewModel>(builder);
