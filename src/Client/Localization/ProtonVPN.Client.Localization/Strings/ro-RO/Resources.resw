@@ -343,7 +343,7 @@
     <value>Proton VPN a eșuat să preia certificatul de autentificare datorită problemelor de rețea.</value>
   </data>
   <data name="Connection_Error_MobileHotspotEnabled">
-    <value>Nu este posibil să vă conectați la VPN în timp ce utilizați dispozitivul ca hotspot mobil. Dezactivați hotspot-ul mobil și reîncercați.</value>
+    <value>Conexiunea a fost blocată de setările de rețea din acest dispozitiv. Acest lucru poate fi cauzat de un hotspot mobil, o altă aplicație VPN sau program de mașini virtuale. Revizuiți configurarea rețelei sau contactați asistența pentru ajutor.</value>
   </data>
   <data name="Connection_Error_NoServers">
     <value>Toate serverele din selecție nu sunt disponibile. Extindeți selecția și reîncercați.</value>
@@ -354,9 +354,6 @@
   </data>
   <data name="Connection_Error_NoTapAdapters">
     <value>Adaptorul de rețea lipsește.</value>
-  </data>
-  <data name="Connection_Error_OpenMobileHotspotSettings">
-    <value>Deschidere setări hotspot mobil</value>
   </data>
   <data name="Connection_Error_ReportAnIssue">
     <value>Raportare o problemă</value>
@@ -1920,10 +1917,13 @@ Latența mare vă poate încetini conexiunea.</value>
     <value>Reîncercare</value>
   </data>
   <data name="Dialogs_P2PDetection_Description">
-    <value>Conexiunea a fost dezactivată deoarece folosiți un server care nu suportă traficul de la persoană-la-persoană (P2P). P2P nu este suportat pe serverele gratuite. Folosiți un server P2P diferit.</value>
+    <value>Treceți la un plan cu plată pentru a debloca serverele P2P (persoană-la-persoană) pentru jocuri online rapide și programe de tip torrent sau încheiați activitatea P2P pentru a vă restaura conexiunea.</value>
   </data>
   <data name="Dialogs_P2PDetection_Title">
-    <value>Trafic P2P detectat</value>
+    <value>P2P nu este permis pe serverele VPN gratuite</value>
+  </data>
+  <data name="Dialogs_P2PDetection_WindowTitle">
+    <value>Descoperiți VPN Plus</value>
   </data>
   <data name="Dialogs_P2P_HowToTorrentLink">
     <value>Cum se folosește partajarea fișierelor prin torrent cu P2P</value>
@@ -2052,6 +2052,15 @@ O sarcină mare a serverului vă poate încetini conexiunea.</value>
   </data>
   <data name="Dialogs_SmartRouting_Title">
     <value>Smart Routing</value>
+  </data>
+  <data name="Dialogs_StreamingDetection_WindowTitle">
+    <value>Descoperiți VPN Plus</value>
+  </data>
+  <data name="Dialogs_StreamingWarning_Description">
+    <value>Serverele VPN Plus vă permit să vă bucurați de filmele și serialele preferate din întreaga lume.</value>
+  </data>
+  <data name="Dialogs_StreamingWarning_Title">
+    <value>Treceți la un plan diferit pentru a ocoli blocările VPN</value>
   </data>
   <data name="Dialogs_SubscriptionExpired_MaybeLater">
     <value>Poate mai târziu</value>
@@ -2303,7 +2312,7 @@ O sarcină mare a serverului vă poate încetini conexiunea.</value>
     <value>Furnizorul de internet poate vedea paginile web pe care le vizitați</value>
   </data>
   <data name="Flyouts_KillSwitch_Advanced_Success">
-    <value>Blochează întregul acces la internet când nu aveți conexiune la Proton VPN.</value>
+    <value>Blochează întregul acces la internet când nu există conexiune la Proton VPN.</value>
   </data>
   <data name="Flyouts_KillSwitch_Info">
     <value>Adresa IP v-ar putea fi expusă dacă se întrerupe conexiunea la VPN.</value>
@@ -2904,7 +2913,7 @@ O sarcină mare a serverului vă poate încetini conexiunea.</value>
     <value>A apărut o eroare la preluarea detaliilor sesiunii. Reîncercați.</value>
   </data>
   <data name="Login_Error_GuestHoleFailedDueToMobileHotspot">
-    <value>Nu este posibil să vă conectați la cont în timp ce utilizați dispozitivul ca hotspot mobil. Dezactivați hotspot-ul mobil și reîncercați.</value>
+    <value>Nu vă puteți conecta din cauza setărilor de rețea din acest dispozitiv. Acest lucru poate fi cauzat de un hotspot mobil, o altă aplicație VPN sau program de mașini virtuale. Revizuiți configurarea rețelei sau contactați asistența pentru ajutor.</value>
   </data>
   <data name="Login_Error_IncorrectTwoFactorCode">
     <value>Cod incorect. Reîncercați.</value>
@@ -3152,7 +3161,7 @@ O solicitare mare a serverului vă poate încetini conexiunea.</value>
     <value>Solicitare server</value>
   </data>
   <data name="Overlay_SmartRouting_Description1">
-    <value>Smart Routing folosește servere virtuale pentru a furniza acoperire VPN în țările greu de accesat.</value>
+    <value>Smart Routing ne permite să oferim acoperire VPN în țări greu accesibile.</value>
   </data>
   <data name="Overlay_SmartRouting_Description2">
     <value>Când vă conectați la un server Smart Routing, va părea că navigați în țara de destinație, chiar dacă serverul fizic este situat în altă parte.</value>
@@ -3522,7 +3531,7 @@ O solicitare mare a serverului vă poate încetini conexiunea.</value>
     <value>Avansat</value>
   </data>
   <data name="Settings_Connection_KillSwitch_Advanced_Description">
-    <value>Permiteți accesul la internet numai atunci când este conectat la Proton VPN. Întrerupătorul de conexiune avansat va rămâne activ chiar și atunci când reporniți dispozitivul.</value>
+    <value>Permitere accesare internet doar când există conexiune la Proton VPN. Întrerupătorul de conexiune avansat va rămâne activ chiar și după repornirea dispozitivului.</value>
   </data>
   <data name="Settings_Connection_KillSwitch_Description">
     <value>Vă protejează adresa IP deconectându-vă de la internet dacă se pierde conexiunea prin VPN.</value>
@@ -3558,7 +3567,7 @@ O solicitare mare a serverului vă poate încetini conexiunea.</value>
     <value>Vă protejați de reclame, malware și instrumente de urmărire de pe site-uri și aplicații.</value>
   </data>
   <data name="Settings_Connection_NetShield_Footer">
-    <value>Unele site-uri web s-ar putea să nu se încarce corect atunci când anunțurile și instrumentele de urmărire sunt blocate.</value>
+    <value>Este posibil ca unele site-uri web să nu se încarce corect atunci când reclamele și instrumentele de urmărire sunt blocate.</value>
   </data>
   <data name="Settings_Connection_NetShield_PrivacyPanel">
     <value>Panou confidențialitate NetShield</value>
@@ -3992,6 +4001,18 @@ O solicitare mare a serverului vă poate încetini conexiunea.</value>
   <data name="SystemNotification_Disconnected">
     <value>Deconectat</value>
   </data>
+  <data name="SystemNotification_P2PWarning_Description">
+    <value>Deblocați programele de tip torrent și jocurile online prin protocoale P2P (persoană-la-persoană) cu servere VPN plătite.</value>
+  </data>
+  <data name="SystemNotification_P2PWarning_Title">
+    <value>P2P nu este disponibil cu VPN gratuit</value>
+  </data>
+  <data name="SystemNotification_StreamingWarning_Description">
+    <value>Unele site-uri web și servicii de redare în flux blochează utilizatorii de VPN gratuit. Treceți la Proton VPN Plus pentru a ocoli aceste blocaje.</value>
+  </data>
+  <data name="SystemNotification_StreamingWarning_Title">
+    <value>Site web blocat?</value>
+  </data>
   <data name="Tray_Actions_ExitApplication">
     <value>Ieșire</value>
   </data>
@@ -4035,6 +4056,12 @@ O solicitare mare a serverului vă poate încetini conexiunea.</value>
   </data>
   <data name="UpsellBanner_NetShield_Title">
     <value>NetShield</value>
+  </data>
+  <data name="UpsellBanner_P2P_Description">
+    <value>Descărcați fișiere prin BitTorrent și alte protocoale de partajare fișiere.</value>
+  </data>
+  <data name="UpsellBanner_P2P_Title">
+    <value>Suport P2P</value>
   </data>
   <data name="UpsellBanner_WrongCountry_Description">
     <value>Schimbați planul abonamentului pentru a alege orice server.</value>

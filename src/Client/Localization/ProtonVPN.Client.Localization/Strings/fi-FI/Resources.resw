@@ -343,7 +343,7 @@
     <value>Proton VPN ei voinut noutaa todennusvarmennetta verkko-ongelman vuoksi.</value>
   </data>
   <data name="Connection_Error_MobileHotspotEnabled">
-    <value>VPN-yhteyttä ei voida muodostaa, kun laitettasi käytetään mobiilitukiasemana. Poista mobiilitukiasema käytöstä ja yritä uudelleen.</value>
+    <value>Yhteys estettiin laitteesi verkkoasetusten vuoksi. Tämä voi johtua mobiilihotspotista, toisesta VPN-sovelluksesta tai virtuaalikoneohjelmistosta. Tarkista verkkoasetuksesi tai ota yhteyttä tukeen saadaksesi apua.</value>
   </data>
   <data name="Connection_Error_NoServers">
     <value>Kaikki valitsemasi palvelimet eivät ole käytettävissä. Laajenna valintaasi tai yritä uudelleen myöhemmin.</value>
@@ -354,9 +354,6 @@
   </data>
   <data name="Connection_Error_NoTapAdapters">
     <value>Verkkosovitin puuttuu.</value>
-  </data>
-  <data name="Connection_Error_OpenMobileHotspotSettings">
-    <value>Avaa mobiilitukiasema-asetukset</value>
   </data>
   <data name="Connection_Error_ReportAnIssue">
     <value>Ilmoita ongelmasta</value>
@@ -1848,10 +1845,13 @@ Korkea viive voi hidastaa yhteyttäsi.</value>
     <value>Yritä uudelleen</value>
   </data>
   <data name="Dialogs_P2PDetection_Description">
-    <value>Yhteytesi on poistettu käytöstä, koska käytät palvelinta, joka ei tue tiedostojen jakoon käytettävää P2P-tiedonsiirtoa. P2P-tiedonsiirtoa ei tueta ilmaisilla palvelimilla. Käytä tähän tarkoitukseen eri palvelinta.</value>
+    <value>Päivitä saadaksesi P2P (peer-to-peer) -palvelimet käyttöösi nopeaa online-pelaamista ja torrenttien lataamista varten tai lopeta P2P-toimintasi palauttaaksesi yhteytesi.</value>
   </data>
   <data name="Dialogs_P2PDetection_Title">
-    <value>P2P-tietoliikennettä havaittu</value>
+    <value>P2P ei ole sallittu ilmaisilla VPN-palvelimilla</value>
+  </data>
+  <data name="Dialogs_P2PDetection_WindowTitle">
+    <value>Tutustu VPN Plussaan</value>
   </data>
   <data name="Dialogs_P2P_HowToTorrentLink">
     <value>Miten torrentoit P2P:llä</value>
@@ -1980,6 +1980,15 @@ Korkea kuormitus voi hidastaa yhteyttäsi.</value>
   </data>
   <data name="Dialogs_SmartRouting_Title">
     <value>Smart Routing</value>
+  </data>
+  <data name="Dialogs_StreamingDetection_WindowTitle">
+    <value>Tutustu VPN Plussaan</value>
+  </data>
+  <data name="Dialogs_StreamingWarning_Description">
+    <value>VPN Plus -palvelimien avulla voit nauttia suosikkielokuvista ja TV-ohjelmista eri puolilta maailmaa.</value>
+  </data>
+  <data name="Dialogs_StreamingWarning_Title">
+    <value>Päivitä ohittaaksesi VPN-estot</value>
   </data>
   <data name="Dialogs_SubscriptionExpired_MaybeLater">
     <value>Ehkä myöhemmin</value>
@@ -2796,7 +2805,7 @@ Korkea kuormitus voi hidastaa yhteyttäsi.</value>
     <value>Virhe noudettaessa istunnon tietoja. Yritä uudelleen.</value>
   </data>
   <data name="Login_Error_GuestHoleFailedDueToMobileHotspot">
-    <value>Sisäänkirjautuminen ei ole mahdollista, kun laitettasi käytetään mobiilitukiasemana. Poista mobiilitukiasema käytöstä ja yritä uudelleen.</value>
+    <value>Kirjautuminen ei onnistu laitteen verkkoasetusten vuoksi. Tämä voi johtua mobiilihotspotista, toisesta VPN-sovelluksesta tai virtuaalikoneohjelmistosta. Tarkista verkkoasetuksesi tai ota yhteyttä tukeen saadaksesi apua.</value>
   </data>
   <data name="Login_Error_IncorrectTwoFactorCode">
     <value>Virheellinen koodi. Yritä uudelleen.</value>
@@ -3044,7 +3053,7 @@ Korkea kuormitus voi hidastaa yhteyttäsi.</value>
     <value>Palvelinten kuormitus</value>
   </data>
   <data name="Overlay_SmartRouting_Description1">
-    <value>Smart Routing uses virtual servers to provide VPN coverage in hard-to-reach countries.</value>
+    <value>Smart Routing mahdollistaa VPN-kattavuuden vaikeasti tavoitettavissa maissa.</value>
   </data>
   <data name="Overlay_SmartRouting_Description2">
     <value>Kun yhdistät Smart Routing -palvelimeen, näytät selaavasi kohdemaastasi, vaikka fyysinen palvelin sijaitseekin muualla.</value>
@@ -3884,6 +3893,18 @@ Korkea kuormitus voi hidastaa yhteyttäsi.</value>
   <data name="SystemNotification_Disconnected">
     <value>Ei yhdistetty</value>
   </data>
+  <data name="SystemNotification_P2PWarning_Description">
+    <value>Maksullisilla VPN-palvelimilla avaat torrentit ja online-pelaamisen P2P-yhteyksien (peer-to-peer) kautta.</value>
+  </data>
+  <data name="SystemNotification_P2PWarning_Title">
+    <value>P2P ei ole saatavilla VPN Free-palvelulla</value>
+  </data>
+  <data name="SystemNotification_StreamingWarning_Description">
+    <value>Jotkin verkkosivustot ja suoratoistopalvelut estävät ilmaisten VPN-palveluiden käyttäjät. Päivitä Proton VPN Plus -versioon ohittaaksesi nämä estot.</value>
+  </data>
+  <data name="SystemNotification_StreamingWarning_Title">
+    <value>Estetty verkkosivu?</value>
+  </data>
   <data name="Tray_Actions_ExitApplication">
     <value>Sulje</value>
   </data>
@@ -3927,6 +3948,12 @@ Korkea kuormitus voi hidastaa yhteyttäsi.</value>
   </data>
   <data name="UpsellBanner_NetShield_Title">
     <value>NetShield</value>
+  </data>
+  <data name="UpsellBanner_P2P_Description">
+    <value>Lataa tiedostoja mm. BitTorrentin kaltaisilla tiestonjakoprotokollilla.</value>
+  </data>
+  <data name="UpsellBanner_P2P_Title">
+    <value>P2P-tuki</value>
   </data>
   <data name="UpsellBanner_WrongCountry_Description">
     <value>Päivitä tilauksesi ja valitse mikä tahansa palvelin.</value>

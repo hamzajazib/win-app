@@ -343,7 +343,7 @@
     <value>Proton VPN kunde inte hämta autentiseringscertifikat på grund av nätverksproblem.</value>
   </data>
   <data name="Connection_Error_MobileHotspotEnabled">
-    <value>It is not possible to connect to VPN while using your device as a mobile hotspot. Disable mobile hotspot and try again.</value>
+    <value>The connection was blocked by network settings on your device. This may be caused by a mobile hotspot, another VPN application, or virtual machine software. Please review your network configuration or contact support for assistance.</value>
   </data>
   <data name="Connection_Error_NoServers">
     <value>Alla servrar i ditt val är inte tillgängliga. Utöka ditt val eller försök igen senare.</value>
@@ -354,9 +354,6 @@
   </data>
   <data name="Connection_Error_NoTapAdapters">
     <value>Nätverksadaptern saknas.</value>
-  </data>
-  <data name="Connection_Error_OpenMobileHotspotSettings">
-    <value>Open mobile hotspot settings</value>
   </data>
   <data name="Connection_Error_ReportAnIssue">
     <value>Rapportera ett problem</value>
@@ -1848,10 +1845,13 @@ Hög latens kan sakta ner din anslutning.</value>
     <value>Försök igen</value>
   </data>
   <data name="Dialogs_P2PDetection_Description">
-    <value>Din anslutning har inaktiverats eftersom du använder en server som inte stöder peer-to-peer-trafik (P2P). P2P stöds inte på gratisservrar. Använd en annan server för P2P.</value>
+    <value>Uppgradera för att låsa upp P2P-servrar (peer-to-peer) för snabb onlinespel och torrenting, eller avsluta din P2P-aktivitet för att återställa din anslutning.</value>
   </data>
   <data name="Dialogs_P2PDetection_Title">
-    <value>P2P-trafik upptäckt</value>
+    <value>P2P är inte tillåtet på gratis VPN-servrar</value>
+  </data>
+  <data name="Dialogs_P2PDetection_WindowTitle">
+    <value>Upptäck VPN Plus</value>
   </data>
   <data name="Dialogs_P2P_HowToTorrentLink">
     <value>Hur man laddar ner torrents med P2P</value>
@@ -1980,6 +1980,15 @@ En hög serverbelastning kan sakta ner din anslutning.</value>
   </data>
   <data name="Dialogs_SmartRouting_Title">
     <value>Smart Routing</value>
+  </data>
+  <data name="Dialogs_StreamingDetection_WindowTitle">
+    <value>Upptäck VPN Plus</value>
+  </data>
+  <data name="Dialogs_StreamingWarning_Description">
+    <value>VPN Plus-servrar låter dig njuta av dina favoritfilmer och TV-program från hela världen.</value>
+  </data>
+  <data name="Dialogs_StreamingWarning_Title">
+    <value>Uppgradera för att kringgå VPN-blockeringar</value>
   </data>
   <data name="Dialogs_SubscriptionExpired_MaybeLater">
     <value>Kanske senare</value>
@@ -2796,7 +2805,7 @@ En hög serverbelastning kan sakta ner din anslutning.</value>
     <value>Ett fel uppstod vid hämtning av sessionsdetaljerna. Försök igen.</value>
   </data>
   <data name="Login_Error_GuestHoleFailedDueToMobileHotspot">
-    <value>It is not possible to sign in while using your device as a mobile hotspot. Disable mobile hotspot and try again.</value>
+    <value>Unable to sign in due to network settings on your device. This may be caused by a mobile hotspot, another VPN application, or virtual machine software. Please review your network configuration or contact support for assistance.</value>
   </data>
   <data name="Login_Error_IncorrectTwoFactorCode">
     <value>Felaktig kod. Försök igen.</value>
@@ -3044,7 +3053,7 @@ En hög serverbelastning kan sakta ner din anslutning.</value>
     <value>Serverbelastning</value>
   </data>
   <data name="Overlay_SmartRouting_Description1">
-    <value>Smart Routing använder virtuella servrar för att tillhandahålla VPN-täckning i svåråtkomliga länder.</value>
+    <value>Smart Routing allows us to provide VPN coverage in hard-to-reach countries.</value>
   </data>
   <data name="Overlay_SmartRouting_Description2">
     <value>När du ansluter till en Smart Routing-server ser det ut som om du surfar i ditt destinationsland, även om den fysiska servern finns någon annanstans.</value>
@@ -3884,6 +3893,18 @@ En hög serverbelastning kan sakta ner din anslutning.</value>
   <data name="SystemNotification_Disconnected">
     <value>Frånkopplad</value>
   </data>
+  <data name="SystemNotification_P2PWarning_Description">
+    <value>Lås upp torrenting och onlinespel via P2P-protokoll (peer-to-peer) med betalda VPN-servrar.</value>
+  </data>
+  <data name="SystemNotification_P2PWarning_Title">
+    <value>P2P är inte tillgängligt med VPN Free</value>
+  </data>
+  <data name="SystemNotification_StreamingWarning_Description">
+    <value>Vissa webbplatser och streamingtjänster blockerar gratis VPN-användare. Uppgradera till Proton VPN Plus för att kringgå dessa blockeringar.</value>
+  </data>
+  <data name="SystemNotification_StreamingWarning_Title">
+    <value>Blockerad webbplats?</value>
+  </data>
   <data name="Tray_Actions_ExitApplication">
     <value>Avsluta</value>
   </data>
@@ -3927,6 +3948,12 @@ En hög serverbelastning kan sakta ner din anslutning.</value>
   </data>
   <data name="UpsellBanner_NetShield_Title">
     <value>NetShield</value>
+  </data>
+  <data name="UpsellBanner_P2P_Description">
+    <value>Ladda ner filer via BitTorrent och andra fildelningsprotokoll.</value>
+  </data>
+  <data name="UpsellBanner_P2P_Title">
+    <value>P2P-stöd</value>
   </data>
   <data name="UpsellBanner_WrongCountry_Description">
     <value>Uppgradera för att välja vilken server som helst.</value>

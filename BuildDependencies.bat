@@ -66,7 +66,7 @@ if not defined GOSRPONLY (
     
     if "%PLATFORM%"=="x64" (
         pushd %currentDir%src\ProtonVPN.LocalAgent\localAgentWin
-        set GO111MODULE=off
+        set GO111MODULE=on
         set CGO_CFLAGS=-O3 -Wall -Wno-unused-function -Wno-switch -std=gnu11 -DWINVER=0x0601
 
         go build -buildmode c-shared -ldflags="-w -s" -trimpath -v -o %resourcesDir%LocalAgent.dll
@@ -79,7 +79,7 @@ if not defined GOSRPONLY (
         docker run --rm ^
         -e GOARCH="arm64" ^
         -e GOOS="windows" ^
-        -e GO111MODULE="off" ^
+        -e GO111MODULE="on" ^
         -v %currentDir%\src\ProtonVPN.LocalAgent:/go/work ^
         -w /go/work/localAgentWin x1unix/go-mingw:1.23 ^
         go build -buildmode c-shared -ldflags="-w -s" -trimpath -v -o LocalAgent.dll .
@@ -119,5 +119,15 @@ curl -o "%mainDir%%ipv6chaosFileName%" "%IPV6_CHAOS_DLL_PATH%/v0.0.0/%PLATFORM%/
 if %ERRORLEVEL% equ 0 (
   echo file saved %mainDir%%ipv6chaosFileName%
 )
+
+set binaryStatusFileName=proton_vpn_binary_status.dll
+
+echo Building %binaryStatusFileName% %time%
+
+pushd %currentDir%src\proton-vpn-binary-status
+
+cargo build --release --no-default-features --features cffi || exit /b %ERRORLEVEL%
+
+xcopy .\target\release\%binaryStatusFileName% %mainDir% /y
 
 echo Dependencies done %time%

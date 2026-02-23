@@ -121,7 +121,7 @@
     <value>Proton VPN Free</value>
   </data>
   <data name="Automation_Properties_ConnectionDetails_Page">
-    <value>Forbindelsesoplysninger side</value>
+    <value>Forbindelsesoplysningsside</value>
   </data>
   <data name="Automation_Properties_Connection_Card_Component">
     <value>Forbindelseskort</value>
@@ -136,34 +136,34 @@
     <value>Kill switch side</value>
   </data>
   <data name="Automation_Properties_LocationDetails_Page">
-    <value>Placeringsoplysninger side</value>
+    <value>Placeringsoplysningsside</value>
   </data>
   <data name="Automation_Properties_Login_Page">
-    <value>Login side</value>
+    <value>Loginside</value>
   </data>
   <data name="Automation_Properties_Main_Page">
     <value>Hovedside</value>
   </data>
   <data name="Automation_Properties_NetShield_Page">
-    <value>NetShield side</value>
+    <value>NetShield-side</value>
   </data>
   <data name="Automation_Properties_NoServers_Page">
     <value>Ingen servere-side</value>
   </data>
   <data name="Automation_Properties_PortForwarding_Page">
-    <value>Port-viderestilling side</value>
+    <value>Port-viderestillingsside</value>
   </data>
   <data name="Automation_Properties_Profile_Page">
     <value>Profilside</value>
   </data>
   <data name="Automation_Properties_Settings_Advanced_Page">
-    <value>Avancerede indstillinger side</value>
+    <value>Avancerede indstillinger-side</value>
   </data>
   <data name="Automation_Properties_Settings_Common_Page">
-    <value>Almindelige indstillinger side</value>
+    <value>Almindelige indstillinger-side</value>
   </data>
   <data name="Automation_Properties_Settings_Page">
-    <value>Indstillinger side</value>
+    <value>Indstillinger-side</value>
   </data>
   <data name="Automation_Properties_Sidebar">
     <value>Sidepanel</value>
@@ -172,7 +172,7 @@
     <value>Landeside</value>
   </data>
   <data name="Automation_Properties_Sidebar_Connections_Gateways_Page">
-    <value>Gateways side</value>
+    <value>Gateways-side</value>
   </data>
   <data name="Automation_Properties_Sidebar_Connections_Page">
     <value>Forbindelsesside</value>
@@ -181,13 +181,13 @@
     <value>Profilside</value>
   </data>
   <data name="Automation_Properties_Sidebar_Connections_Recents_Page">
-    <value>Seneste forbindelser side</value>
+    <value>Seneste forbindelser-side</value>
   </data>
   <data name="Automation_Properties_Sidebar_Search_Results_Page">
     <value>Søgeresultater</value>
   </data>
   <data name="Automation_Properties_SplitTunneling_Page">
-    <value>Split tunneling side</value>
+    <value>Split tunneling-side</value>
   </data>
   <data name="Cities">
     <value>Byer</value>
@@ -268,7 +268,7 @@
     <value>Genopret forbindelse</value>
   </data>
   <data name="Common_Actions_Refresh">
-    <value>Opdater</value>
+    <value>Opdatér</value>
   </data>
   <data name="Common_Actions_Remove">
     <value>Fjern</value>
@@ -343,7 +343,7 @@
     <value>Proton VPN kunne ikke hente godkendelsescertifikatet pga. et netværksproblem.</value>
   </data>
   <data name="Connection_Error_MobileHotspotEnabled">
-    <value>Det er ikke muligt at forbinde til VPN, mens du bruger din enhed som et mobilt hotspot. Deaktiver mobilt hotspot, og prøv igen.</value>
+    <value>Forbindelsen blev blokeret af din enheds netværksindstillinger. Dette kan skyldes et mobilt hotspot, en anden VPN-applikation eller virtuel maskine-software. Gennemgå din netværkskonfiguration eller kontakt support for at få hjælp.</value>
   </data>
   <data name="Connection_Error_NoServers">
     <value>Alle servere i dit valg er utilgængelige. Udvid venligst dit valg eller prøv igen senere.</value>
@@ -355,9 +355,6 @@
   <data name="Connection_Error_NoTapAdapters">
     <value>Netværksadapteren mangler.</value>
   </data>
-  <data name="Connection_Error_OpenMobileHotspotSettings">
-    <value>Åbn indstillinger for mobilt hotspot</value>
-  </data>
   <data name="Connection_Error_ReportAnIssue">
     <value>Anmeld en fejl</value>
   </data>
@@ -365,10 +362,10 @@
     <value>Proton VPN kan ikke tilslutte fordi RPC serveren er utilgængelig på dit system.</value>
   </data>
   <data name="Connection_Error_SessionLimitReachedFreeUser">
-    <value>Du har nået din maksimale enhedsgrænse. Afbryd venligst forbindelsen til en anden enhed for at forbinde denne eller opgrader til et PLUS-abonnement for at forbinde op til 10 enheder på samme tid.</value>
+    <value>Du har nået din maksimale enhedsgrænse. Afbryd forbindelsen til en anden enhed for at forbinde denne eller opgrader til et PLUS-abonnement for at forbinde op til 10 enheder på samme tid.</value>
   </data>
   <data name="Connection_Error_SessionLimitReachedPaidUser">
-    <value>Du har nået din maksimale enhedsgrænse. Afbryd venligst forbindelsen til en anden enhed for at tilslutte denne enhed.</value>
+    <value>Du har nået din maksimale enhedsgrænse. Afbryd forbindelsen til en anden enhed for at tilslutte denne enhed.</value>
   </data>
   <data name="Connection_Error_TapAdapterInUse">
     <value>Din netværksadapter er i øjeblikket i brug.</value>
@@ -380,7 +377,7 @@
     <value>Forbindelse mislykkedes</value>
   </data>
   <data name="Connection_Error_TlsCertificate">
-    <value>Der er et problem med at validere VPN-servercertifikatet, som kan indikere at netværksforbindelsen bliver manipuleret med eller serveren du forsøger at oprette forbindelse til, har et konfigurationsproblem. Få hjælp fra vores kundesupport ved at sende en problemrapportering.</value>
+    <value>Der er et problem med at validere VPN-servercertifikatet, som kan indikere at netværksforbindelsen bliver manipuleret med eller serveren du forsøger at oprette forbindelse til, har et konfigurationsproblem. Få hjælp fra vores kundesupport ved at sende en problemrapport.</value>
   </data>
   <data name="Connection_Error_TwoFactorRequired_Description">
     <value>For at forbinde til VPN skal du gå til din organisations 2FA-portal og trykke på din sikkerhedsnøgle.</value>
@@ -446,7 +443,7 @@ Fejlkode: {0}</value>
     <value>Servere i dette land er tilgængelige med VPN Plus</value>
   </data>
   <data name="Connections_Country_UnderMaintenance">
-    <value>Alle servere i denne land er under vedligeholdelse</value>
+    <value>Alle servere i dette land er under vedligeholdelse</value>
   </data>
   <data name="Connections_Country_UnderMaintenance_Title">
     <value>Kan ikke oprette forbindelse</value>
@@ -461,16 +458,16 @@ Fejlkode: {0}</value>
     <value>Free servere</value>
   </data>
   <data name="Connections_Gateway">
-    <value>Portal</value>
+    <value>Gateway</value>
   </data>
   <data name="Connections_Gateway_Restricted">
-    <value>Servere i denne portal er tilgængelige med VPN Plus</value>
+    <value>Servere i denne gateway er tilgængelige med VPN Plus</value>
   </data>
   <data name="Connections_Gateway_UnderMaintenance">
-    <value>Alle servere i denne portal er under vedligeholdelse</value>
+    <value>Alle servere i denne gateway er under vedligeholdelse</value>
   </data>
   <data name="Connections_Gateways_One">
-    <value>Portal ({0})</value>
+    <value>Gateway ({0})</value>
   </data>
   <data name="Connections_Gateways_Other">
     <value>Portaler ({0})</value>
@@ -503,10 +500,10 @@ Fejlkode: {0}</value>
     <value>P2P-servere</value>
   </data>
   <data name="Connections_P2P_States_One">
-    <value>P2P-stat/region ({0})</value>
+    <value>P2P-stat ({0})</value>
   </data>
   <data name="Connections_P2P_States_Other">
-    <value>P2P-stater/regioner ({0})</value>
+    <value>P2P-stater ({0})</value>
   </data>
   <data name="Connections_Profiles_One">
     <value>Profil ({0})</value>
@@ -584,10 +581,10 @@ Fejlkode: {0}</value>
     <value>Fastgjort ({0})</value>
   </data>
   <data name="Connections_SecureCore_Countries_One">
-    <value>land med Secure Core ({0})</value>
+    <value>Land med Secure Core ({0})</value>
   </data>
   <data name="Connections_SecureCore_Countries_Other">
-    <value>lande med Secure Core ({0})</value>
+    <value>Lande med Secure Core ({0})</value>
   </data>
   <data name="Connections_SecureCore_Servers_One">
     <value>Secure Core-server</value>
@@ -608,10 +605,10 @@ Fejlkode: {0}</value>
     <value>Vis servere ({0})</value>
   </data>
   <data name="Connections_SeeStates_One">
-    <value>Se stat/region ({0})</value>
+    <value>Se stat ({0})</value>
   </data>
   <data name="Connections_SeeStates_Other">
-    <value>Se stater/regioner ({0})</value>
+    <value>Se stater ({0})</value>
   </data>
   <data name="Connections_Server">
     <value>Server</value>
@@ -632,18 +629,18 @@ Fejlkode: {0}</value>
     <value>Status</value>
   </data>
   <data name="Connections_State_Restricted">
-    <value>Servere i denne stat/region er tilgængelige med VPN Plus.</value>
+    <value>Servere i denne stat er tilgængelige med VPN Plus.</value>
     <comment>Message appears as a tooltip whenever a free user is trying to connect to a state. In this context, States refers to Country states (eg. Arizona, California... for USA)</comment>
   </data>
   <data name="Connections_State_UnderMaintenance">
-    <value>Alle servere i denne stat/region er under vedligeholdelse.</value>
+    <value>Alle servere i denne stat er under vedligeholdelse.</value>
     <comment>Message appears as a tooltip whenever all the servers from that state are under maintenance. In this context, States refers to Country states (eg. Arizona, California... for USA)</comment>
   </data>
   <data name="Connections_States_One">
-    <value>Stat/region ({0})</value>
+    <value>Stat ({0})</value>
   </data>
   <data name="Connections_States_Other">
-    <value>Stater/regioner ({0})</value>
+    <value>Stater ({0})</value>
   </data>
   <data name="Connections_Tor_Countries_One">
     <value>land med Tor ({0})</value>
@@ -725,7 +722,7 @@ Fejlkode: {0}</value>
     <value>Brug Tor-netværket via din VPN-forbindelse for øget diskretion.</value>
   </data>
   <data name="Countries_TryDifferentKeyword">
-    <value>Venligst prøv et andet nøgleord.</value>
+    <value>Prøv et andet nøgleord.</value>
   </data>
   <data name="Country_Fastest">
     <value>Hurtigste land</value>
@@ -1765,7 +1762,7 @@ Fejlkode: {0}</value>
     <value>Abonnement udløbet</value>
   </data>
   <data name="Dialogs_Common_UpgradeToGetPlusFeatures">
-    <value>Opgrader for at få adgang til Plus servere og features igen.</value>
+    <value>Opgradér for at få adgang til Plus servere og features igen.</value>
   </data>
   <data name="Dialogs_DisabledService_Description">
     <value>Det ser ud til, at Proton VPN-tjenesten er deaktiveret. Du skal genaktivere tjenesten for at forbinde.</value>
@@ -1848,10 +1845,13 @@ Høj latency kan gøre din forbindelse langsommere.</value>
     <value>Prøv igen</value>
   </data>
   <data name="Dialogs_P2PDetection_Description">
-    <value>Din forbindelse er blevet deaktiveret, fordi du bruger en server, der ikke understøtter peer-to-peer (P2P) trafik. P2P understøttes ikke på gratis servere. Brug venligst en anden server til P2P.</value>
+    <value>Opgrader for at låse op for P2P (peer-to-peer)-servere til hurtigt online spil og torrenting, eller afslut din P2P-aktivitet for at genoprette din forbindelse.</value>
   </data>
   <data name="Dialogs_P2PDetection_Title">
-    <value>P2P-trafik registreret</value>
+    <value>P2P er ikke tilladt på gratis VPN-servere</value>
+  </data>
+  <data name="Dialogs_P2PDetection_WindowTitle">
+    <value>Oplev VPN Plus</value>
   </data>
   <data name="Dialogs_P2P_HowToTorrentLink">
     <value>Sådan bruges torrent med P2P</value>
@@ -1934,7 +1934,7 @@ Høj latency kan gøre din forbindelse langsommere.</value>
     <value>Noget gik galt</value>
   </data>
   <data name="Dialogs_ReportIssue_Result_Fail_Description">
-    <value>Vi kunne ikke sende din rapport. Tjek venligst din forbindelse, og prøv igen.</value>
+    <value>Vi kunne ikke sende din rapport. Tjek din forbindelse og prøv igen.</value>
   </data>
   <data name="Dialogs_ReportIssue_Result_Success">
     <value>Rapport sendt</value>
@@ -1980,6 +1980,15 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
   </data>
   <data name="Dialogs_SmartRouting_Title">
     <value>Smart routing</value>
+  </data>
+  <data name="Dialogs_StreamingDetection_WindowTitle">
+    <value>Oplev VPN Plus</value>
+  </data>
+  <data name="Dialogs_StreamingWarning_Description">
+    <value>VPN Plus-servere lader dig nyde dine yndlingsfilm og TV-serier fra hele verden.</value>
+  </data>
+  <data name="Dialogs_StreamingWarning_Title">
+    <value>Opgradér for at omgå VPN-blokeringer</value>
   </data>
   <data name="Dialogs_SubscriptionExpired_MaybeLater">
     <value>Måske senere</value>
@@ -2096,7 +2105,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Tillykke! Du har aktiveret premium sikkerheds- og ydeevnefunktioner på alle Proton-tjenester.</value>
   </data>
   <data name="Dialogs_WelcomeUnlimited_Description2">
-    <value>Nyd det bedste af Proton privatliv.</value>
+    <value>Nyd det bedste af Proton privatlivsbeskyttelse.</value>
   </data>
   <data name="Dialogs_WelcomeUnlimited_Title">
     <value>Velkommen til Proton Unlimited</value>
@@ -2120,13 +2129,13 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>LAN-tilsutninger</value>
   </data>
   <data name="Dialogs_WhatsNew_NewLook_Description">
-    <value>Vi opfriskede vores design og flyttede nogle ting rundt for at gøre appen nemmere at bruge.</value>
+    <value>Vi har opfrisket designet og flyttet rundt på nogle ting for at gøre appen nemmere at bruge.</value>
   </data>
   <data name="Dialogs_WhatsNew_NewLook_Title">
     <value>Nyt udseende, samme beskyttelse</value>
   </data>
   <data name="Dialogs_WhatsNew_PortNumber_Description">
-    <value>Når videresendelse af port er aktiveret, vil du nu se Deres aktive portnummer på startskærmen.</value>
+    <value>Når portvideresendelse er aktiveret, vil du nu se dit aktive portnummer på startskærmen.</value>
   </data>
   <data name="Dialogs_WhatsNew_PortNumber_Title">
     <value>Aktivt portnummer</value>
@@ -2165,13 +2174,13 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Luk Proton VPN</value>
   </data>
   <data name="Flyouts_Country_Description1">
-    <value>Browsing uden en VPN gør dig sårbar over for lokationsbaserede internetrestriktioner.</value>
+    <value>At browse uden VPN gør dig sårbar over for lokationsbaserede internetrestriktioner.</value>
   </data>
   <data name="Flyouts_Country_Description2">
     <value>Websteder kan bruge geoblokering til at begrænse indhold til bestemte placeringer. Regeringer kan også instruere ISPs (Internet Service Providers) i at blokere bestemte websteder i deres land.</value>
   </data>
   <data name="Flyouts_Country_Description3">
-    <value>En VPN får det til at se ud, som om du browser fra et andet sted, og beskytter dig mod overvågning og censur.</value>
+    <value>VPN får det til at se ud, som om du browser fra et andet sted, og beskytter dig mod overvågning og censur.</value>
   </data>
   <data name="Flyouts_Country_Title">
     <value>Land</value>
@@ -2231,7 +2240,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Blokerer al internetadgang, når du ikke er forbundet til Proton VPN</value>
   </data>
   <data name="Flyouts_KillSwitch_Info">
-    <value>Deres IP-adresse kunne blive afsløret, hvis din VPN-forbindelse afbrydes</value>
+    <value>Din IP-adresse kunne blive afsløret, hvis din VPN-forbindelse afbrydes</value>
   </data>
   <data name="Flyouts_KillSwitch_Info_Disconnected">
     <value>Avanceret kill switch deaktiverer din internetforbindelse for at beskytte din IP-adresse, mens du ikke er forbundet til Proton VPN.</value>
@@ -2246,7 +2255,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>For at komme online igen, forbind til VPN eller deaktivér avanceret kill switch</value>
   </data>
   <data name="Flyouts_NetShield_AdsMalwareTrackers_Success">
-    <value>De er beskyttet mod annoncer, trackere og malware</value>
+    <value>Du er beskyttet mod annoncer, trackere og malware</value>
   </data>
   <data name="Flyouts_NetShield_Info">
     <value>Beskyt dig selv mod reklamer, trackere og malware på websteder og i apps</value>
@@ -2291,7 +2300,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Protokol</value>
   </data>
   <data name="Flyouts_ServerLoad_Description">
-    <value>Serverbelastning viser, hvor tæt en server er på sin maksimale kapacitet.En høj serverbelastning kan gøre din forbindelse langsommere.</value>
+    <value>Serverbelastning viser, hvor tæt en server er på sin maksimale kapacitet. En høj serverbelastning kan gøre din forbindelse langsommere.</value>
   </data>
   <data name="Flyouts_ServerLoad_High">
     <value>Høj (91-100%)</value>
@@ -2464,17 +2473,17 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>{0} dage</value>
   </data>
   <data name="Format_Time_DayHour_One">
-    <value>{0} dag {1} t</value>
+    <value>{0} dag {1} time</value>
   </data>
   <data name="Format_Time_DayHour_Other">
-    <value>{0} dage {1} t</value>
+    <value>{0} dage {1} timer</value>
   </data>
   <data name="Format_Time_Hours">
-    <value>{0} t</value>
+    <value>{0} time(r)</value>
     <comment>Format a time as a number of hours. {0} is a placeholder for the number of hours (eg. 1 hr or 20 hr). Use abbreviations, no pluralization.</comment>
   </data>
   <data name="Format_Time_HoursMinutes">
-    <value>{0} t {1} min</value>
+    <value>{0} time(r) {1} minut(ter)</value>
     <comment>Format a time as a number of hours and minutes. {0} is a placeholder for the number of hours and {1} for the number of minutes (eg. 5 hr 36 min). Use abbreviations, no pluralization.</comment>
   </data>
   <data name="Format_Time_HoursMinutesSeconds_Short">
@@ -2488,11 +2497,11 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>{0} timer siden</value>
   </data>
   <data name="Format_Time_Minutes">
-    <value>{0} min</value>
+    <value>{0} minut(ter)</value>
     <comment>Format a time as a number of minutes. {0} is a placeholder for the number of minutes (eg. 1 min or 20 min). Use abbreviations, no pluralization.</comment>
   </data>
   <data name="Format_Time_MinutesSeconds">
-    <value>{0} min {1} sek</value>
+    <value>{0} minut(ter) {1} sekund(er)</value>
     <comment>Format a time as a number of minutes and seconds. {0} is a placeholder for the number of minutes and {1} for the number of seconds (eg. 5 min 36 sec). Use abbreviations, no pluralization.</comment>
   </data>
   <data name="Format_Time_MinutesSeconds_Short">
@@ -2506,7 +2515,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>{0} minutter siden</value>
   </data>
   <data name="Format_Time_Seconds">
-    <value>{0} sek</value>
+    <value>{0} sekund(er)</value>
     <comment>Format a time as a number of seconds. {0} is a placeholder for the number of second (eg. 1 sec or 20 sec). Use abbreviations for seconds, no pluralization.</comment>
   </data>
   <data name="Format_Time_Seconds_Ago_One">
@@ -2534,7 +2543,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Tilfældig gateway</value>
   </data>
   <data name="Gateways_Page_Description">
-    <value>Forbind til en portal for at få adgang til organisationens VPN.</value>
+    <value>Forbind til en gateway for at få adgang til organisationens VPN.</value>
   </data>
   <data name="Gateways_Page_Title">
     <value>Gateways</value>
@@ -2600,7 +2609,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Land</value>
   </data>
   <data name="Home_ConnectionDetails_Gateway">
-    <value>Portal</value>
+    <value>Gateway</value>
   </data>
   <data name="Home_ConnectionDetails_Hide">
     <value>Skjul forbindelsesoplysninger</value>
@@ -2648,7 +2657,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Stat</value>
   </data>
   <data name="Home_ConnectionDetails_Title">
-    <value>Forbindelses detaljer</value>
+    <value>Forbindelsesdetaljer</value>
   </data>
   <data name="Home_ConnectionDetails_TwoFactorRequired_Description">
     <value>Godkend dig igen på din organisations 2FA-portal for at fortsætte.</value>
@@ -2666,7 +2675,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Trafik i alt</value>
   </data>
   <data name="Home_ConnectionDetails_Volume_Download">
-    <value>Overfør mængde</value>
+    <value>Download-mængde</value>
   </data>
   <data name="Home_ConnectionDetails_Volume_Total">
     <value>Mængde i alt</value>
@@ -2700,10 +2709,10 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Reklamer er marketingbannere eller pop-ups, der vises på hjemmesider og i apps.</value>
   </data>
   <data name="Home_NetShield_DataSaved">
-    <value>Data gemt</value>
+    <value>Data sparet</value>
   </data>
   <data name="Home_NetShield_DataSaved_Description">
-    <value>Anslået antal gemte data ved at blokere uønskede annoncer, sporing og malware.</value>
+    <value>Anslået mængde data sparet ved at blokere uønskede annoncer, sporing og malware.</value>
   </data>
   <data name="Home_NetShield_Landmark">
     <value>NetShield-statistikker</value>
@@ -2768,7 +2777,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Log ud</value>
   </data>
   <data name="Home_TitleBar_Menu_UpdateNow">
-    <value>Opdater nu</value>
+    <value>Opdatér nu</value>
   </data>
   <data name="Home_Update_UpdateAvailable">
     <value>Opdatering tilgængelig</value>
@@ -2796,23 +2805,23 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Der opstod en fejl, da sessionsoplysningerne blev hentet. Prøv venligst igen.</value>
   </data>
   <data name="Login_Error_GuestHoleFailedDueToMobileHotspot">
-    <value>Det er ikke muligt at forbinde til VPN, mens du bruger din enhed som et mobilt hotspot. Deaktiver mobilt hotspot, og prøv igen.</value>
+    <value>Kan ikke logge ind på grund af din enheds netværksindstillinger. Dette kan skyldes et mobilt hotspot, en anden VPN-applikation eller virtuel maskine-software. Gennemgå din netværkskonfiguration eller kontakt support for at få hjælp.</value>
   </data>
   <data name="Login_Error_IncorrectTwoFactorCode">
-    <value>Forkert kode. Prøv venligst igen.</value>
+    <value>Forkert kode. Prøv igen.</value>
   </data>
   <data name="Login_Error_SessionExpired">
-    <value>Din session er udløbet. Log venligst ind igen.</value>
+    <value>Din session er udløbet. Log ind igen.</value>
     <comment>The message displayed in Login window when expired session is detected</comment>
   </data>
   <data name="Login_Error_SsoAuthFailed">
-    <value>SSO-godkendelse mislykkedes. Prøv venligst igen.</value>
+    <value>SSO-godkendelse mislykkedes. Prøv igen.</value>
   </data>
   <data name="Login_Error_TwoFactorAuthFailed">
     <value>Forkert brugernavn eller adgangskode. Prøv igen.</value>
   </data>
   <data name="Login_Error_TwoFactorFailed">
-    <value>Tofaktorgodkendelse mislykkedes. Log venligst på igen.</value>
+    <value>Tofaktorgodkendelse mislykkedes. Log på igen.</value>
   </data>
   <data name="Login_Error_WebAuthnNotSupported">
     <value>Sikkerhedsnøgle-godkendelse er ikke tilgængelig for din enhed eller fjernskrivebordsforbindelse.</value>
@@ -2834,13 +2843,13 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Første ciffer</value>
   </data>
   <data name="Login_TwoFactor_Digit2">
-    <value>Anden ciffer</value>
+    <value>Andet ciffer</value>
   </data>
   <data name="Login_TwoFactor_Digit3">
-    <value>Trejde ciffer</value>
+    <value>Tredje ciffer</value>
   </data>
   <data name="Login_TwoFactor_Digit4">
-    <value>Fjerde ciffe</value>
+    <value>Fjerde ciffer</value>
   </data>
   <data name="Login_TwoFactor_Digit5">
     <value>Femte ciffer</value>
@@ -2861,19 +2870,19 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Indsæt U2F- eller FIDO-nøglen, der er knyttet til din Proton-konto.</value>
   </data>
   <data name="Main_Loading">
-    <value>Indlæser, vent venligst...</value>
+    <value>Indlæser, vent ...</value>
     <comment>Message in the loading screen when starting the app</comment>
   </data>
   <data name="Main_Loading_SigningIn">
-    <value>Logger ind, vent venligst...</value>
+    <value>Logger ind, vent...</value>
     <comment>Message in the loading screen when signing in</comment>
   </data>
   <data name="Main_Loading_SigningIn_Longer">
-    <value>Dette tager længere tid end normalt, men vi arbejder på det.</value>
+    <value>Det tager længere tid end normalt, men vi arbejder på det.</value>
     <comment>Message in the loading screen when sign in action takes longer than expected</comment>
   </data>
   <data name="Main_Loading_SigningOut">
-    <value>Logger ud, vent venligst...</value>
+    <value>Logger ud, vent...</value>
     <comment>Message in the loading screen when signing out</comment>
   </data>
   <data name="Map_ConnectTo">
@@ -2908,7 +2917,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Gå til din torrentklient eller P2P-app, og indtast dette nummer.</value>
   </data>
   <data name="Notifications_SessionLimit_Description">
-    <value>Du har nået din maksimale enhedsgrænse. For at genoprette forbindelse til VPN, skal du venligst afbryde forbindelsen fra en anden enhed.</value>
+    <value>Du har nået din maksimale enhedsgrænse. For at genoprette forbindelse til VPN, skal du afbryde forbindelsen fra en anden enhed.</value>
   </data>
   <data name="Notifications_SubscriptionExpired_Description_Connected">
     <value>Dit abonnement er blevet nedgraderet til Proton Free, og du forbindes igen til en gratis og hurtig server..</value>
@@ -2999,7 +3008,7 @@ VPN-forbindelse</value>
     <value>Højere svartid</value>
   </data>
   <data name="Overlay_SecureCore_SecureCoreConnection_Privacy">
-    <value>Avanceret privatliv</value>
+    <value>Avanceret privatlivsbeskyttelse</value>
   </data>
   <data name="Overlay_SecureCore_StandardConnection">
     <value>Standard
@@ -3009,7 +3018,7 @@ VPN-forbindelse</value>
     <value>Lavere svartid</value>
   </data>
   <data name="Overlay_SecureCore_StandardConnection_Privacy">
-    <value>Høj grad af privatliv</value>
+    <value>Høj grad af privatlivsbeskyttelse</value>
   </data>
   <data name="Overlay_SecureCore_Title">
     <value>Secure Core</value>
@@ -3044,7 +3053,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Serverbelastning</value>
   </data>
   <data name="Overlay_SmartRouting_Description1">
-    <value>Smart Routing bruger virtuelle servere til at levere VPN-dækning i svært tilgængelige lande.</value>
+    <value>Smart Routing allows us to provide VPN coverage in hard-to-reach countries.</value>
   </data>
   <data name="Overlay_SmartRouting_Description2">
     <value>Når du forbinder til en Smart Routing-server, vil det se ud, som om du browser i dit destinationsland, selvom den fysiske server befinder sig et andet sted.</value>
@@ -3185,7 +3194,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Hurtigste gratis server</value>
   </data>
   <data name="Server_Feature_B2B">
-    <value>Portal</value>
+    <value>Gateway</value>
   </data>
   <data name="Server_Feature_B2B_Description">
     <value>Tilgå din organisations servere</value>
@@ -3351,7 +3360,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>NAT type</value>
   </data>
   <data name="Settings_Connection_Advanced_NatType_Conflict_Description">
-    <value>Du vil ikke kunne bruge port forwarding med Moderate NAT.</value>
+    <value>Du vil ikke kunne bruge port forwarding med Moderat NAT.</value>
   </data>
   <data name="Settings_Connection_Advanced_NatType_Conflict_Title">
     <value>Aktivér Moderat NAT?</value>
@@ -3432,7 +3441,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>NetShield</value>
   </data>
   <data name="Settings_Connection_NetShield_BlockAdsMalwareTrackers">
-    <value>Bloker annoncer, malware og trackere</value>
+    <value>Blokér annoncer, malware og trackere</value>
   </data>
   <data name="Settings_Connection_NetShield_BlockMalwareOnly">
     <value>Blokér kun malware</value>
@@ -3450,7 +3459,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Beskyt dig selv mod reklamer, malware og trackere på hjemmesider og i apps.</value>
   </data>
   <data name="Settings_Connection_NetShield_Footer">
-    <value>Nogle hjemmesider kan ikke indlæse korrekt, når annoncer og trackers er blokeret.</value>
+    <value>Nogle hjemmesider kan ikke indlæses korrekt, når annoncer og trackers er blokeret.</value>
   </data>
   <data name="Settings_Connection_NetShield_PrivacyPanel">
     <value>NetShield Privatlivspanel</value>
@@ -3465,7 +3474,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Kopiér portnummer</value>
   </data>
   <data name="Settings_Connection_PortForwarding_Conflict_Description">
-    <value>Du kan ikke bruge Moderate NAT, når port forwarding er aktiveret.</value>
+    <value>Du kan ikke bruge Moderat NAT, når port forwarding er aktiveret.</value>
   </data>
   <data name="Settings_Connection_PortForwarding_Conflict_Title">
     <value>Aktivér port forwarding?</value>
@@ -3499,7 +3508,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Gå til profilerne</value>
   </data>
   <data name="Settings_Connection_Protocol_NavigationFailed_Message">
-    <value>De er i øjeblikket forbundet til en VPN-profil.
+    <value>Du er i øjeblikket forbundet til en VPN-profil.
 
 • For at ændre protokollen for denne forbindelse skal du afbryde forbindelsen og derefter redigere din profil.
 
@@ -3601,10 +3610,10 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>Åbn på skrivebordet</value>
   </data>
   <data name="Settings_General_AutoStartup_AutoLaunch_SystemTray">
-    <value>Minimér til System ikon</value>
+    <value>Minimér til System-bakken</value>
   </data>
   <data name="Settings_General_AutoStartup_AutoLaunch_Taskbar">
-    <value>Minimér til proceslinje</value>
+    <value>Minimér til proceslinjen</value>
   </data>
   <data name="Settings_General_AutoStartup_Description">
     <value>Sæt appen til at starte eller forbinde automatisk.</value>
@@ -3690,7 +3699,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>OpenVPN</value>
   </data>
   <data name="Settings_Protocols_Smart_Description">
-    <value>Auto-vælger den bedste protokol til din forbindelse.</value>
+    <value>Vælger automatisk den bedste protokol til din forbindelse.</value>
   </data>
   <data name="Settings_Protocols_Smart_Title">
     <value>Smart</value>
@@ -3811,7 +3820,7 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
     <value>E-mail</value>
   </data>
   <data name="SignIn_Form_ForgotUsername">
-    <value>Glemte brugernavn</value>
+    <value>Glemt brugernavn</value>
     <comment>Help button at the bottom of the login window</comment>
   </data>
   <data name="SignIn_Form_Help">
@@ -3884,6 +3893,18 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
   <data name="SystemNotification_Disconnected">
     <value>Afbrudt</value>
   </data>
+  <data name="SystemNotification_P2PWarning_Description">
+    <value>Lås op for torrenting og online-spil over P2P (peer-to-peer)-protokoller med betalte VPN-servere.</value>
+  </data>
+  <data name="SystemNotification_P2PWarning_Title">
+    <value>P2P ikke tilgængelig med VPN Free</value>
+  </data>
+  <data name="SystemNotification_StreamingWarning_Description">
+    <value>Nogle websteder og streamingtjenester blokerer gratis VPN-brugere. Opgradér til Proton VPN Plus for at omgå disse blokeringer.</value>
+  </data>
+  <data name="SystemNotification_StreamingWarning_Title">
+    <value>Blokeret websted?</value>
+  </data>
   <data name="Tray_Actions_ExitApplication">
     <value>Afslut</value>
   </data>
@@ -3927,6 +3948,12 @@ En høj serverbelastning kan gøre din forbindelse langsommere.</value>
   </data>
   <data name="UpsellBanner_NetShield_Title">
     <value>NetShield</value>
+  </data>
+  <data name="UpsellBanner_P2P_Description">
+    <value>Download filer via BitTorrent og andre fildelingsprotokoller.</value>
+  </data>
+  <data name="UpsellBanner_P2P_Title">
+    <value>P2P-understøttelse</value>
   </data>
   <data name="UpsellBanner_WrongCountry_Description">
     <value>Opgrader og vælg en vilkårlig server.</value>

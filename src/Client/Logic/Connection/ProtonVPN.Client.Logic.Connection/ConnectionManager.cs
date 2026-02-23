@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright (c) 2025 Proton AG
+ * Copyright (c) 2026 Proton AG
  *
  * This file is part of ProtonVPN.
  *
@@ -19,6 +19,7 @@
 
 using System.Data;
 using ProtonVPN.Client.EventMessaging.Contracts;
+using ProtonVPN.Client.Logic.Auth.Contracts;
 using ProtonVPN.Client.Logic.Auth.Contracts.Messages;
 using ProtonVPN.Client.Logic.Connection.Contracts.Enums;
 using ProtonVPN.Client.Logic.Connection.Contracts.GuestHole;
@@ -36,11 +37,13 @@ using ProtonVPN.Client.Logic.Servers.Contracts.Models;
 using ProtonVPN.Client.Logic.Services.Contracts;
 using ProtonVPN.Client.Settings.Contracts;
 using ProtonVPN.Common.Core.Networking;
+using ProtonVPN.Crypto.Contracts;
 using ProtonVPN.EntityMapping.Contracts;
 using ProtonVPN.Logging.Contracts;
 using ProtonVPN.Logging.Contracts.Events.AppLogs;
 using ProtonVPN.Logging.Contracts.Events.ConnectLogs;
-using ProtonVPN.ProcessCommunication.Contracts.Entities.Auth;
+using ProtonVPN.ProcessCommunication.Contracts.Entities.Crypto;
+using ProtonVPN.ProcessCommunication.Contracts.Entities.LocalAgent;
 using ProtonVPN.ProcessCommunication.Contracts.Entities.Vpn;
 using ProtonVPN.StatisticalEvents.Contracts.Dimensions;
 using ConnectionDetails = ProtonVPN.Client.Logic.Connection.Contracts.Models.ConnectionDetails;
@@ -65,9 +68,11 @@ public class ConnectionManager : IInternalConnectionManager, IGuestHoleConnector
     private readonly IReconnectionRequestCreator _reconnectionRequestCreator;
     private readonly IDisconnectionRequestCreator _disconnectionRequestCreator;
     private readonly IServersLoader _serversLoader;
+    private readonly IFavoriteServersStorage _favoriteServersStorage;
     private readonly IGuestHoleServersFileStorage _guestHoleServersFileStorage;
     private readonly IGuestHoleConnectionRequestCreator _guestHoleConnectionRequestCreator;
     private readonly IConnectionStatisticalEventsManager _statisticalEventManager;
+    private readonly IConnectionKeyManager _connectionKeyManager;
 
     private DateTime _minReconnectionDateUtc = DateTime.MinValue;
 
@@ -103,9 +108,11 @@ public class ConnectionManager : IInternalConnectionManager, IGuestHoleConnector
         IReconnectionRequestCreator reconnectionRequestCreator,
         IDisconnectionRequestCreator disconnectionRequestCreator,
         IServersLoader serversLoader,
+        IFavoriteServersStorage favoriteServersStorage,
         IGuestHoleServersFileStorage guestHoleServersFileStorage,
         IGuestHoleConnectionRequestCreator guestHoleConnectionRequestCreator,
-        IConnectionStatisticalEventsManager statisticalEventManager)
+        IConnectionStatisticalEventsManager statisticalEventManager,
+        IConnectionKeyManager connectionKeyManager)
     {
         _logger = logger;
         _settings = settings;
@@ -116,10 +123,12 @@ public class ConnectionManager : IInternalConnectionManager, IGuestHoleConnector
         _reconnectionRequestCreator = reconnectionRequestCreator;
         _disconnectionRequestCreator = disconnectionRequestCreator;
         _serversLoader = serversLoader;
+        _favoriteServersStorage = favoriteServersStorage;
         _guestHoleServersFileStorage = guestHoleServersFileStorage;
         _guestHoleConnectionRequestCreator = guestHoleConnectionRequestCreator;
         _guestHoleConnectionRequestCreator = guestHoleConnectionRequestCreator;
         _statisticalEventManager = statisticalEventManager;
+        _connectionKeyManager = connectionKeyManager;
     }
 
     public async Task ConnectAsync(
@@ -266,6 +275,8 @@ public class ConnectionManager : IInternalConnectionManager, IGuestHoleConnector
 
                 if (server is not null && physicalServer is not null)
                 {
+                    _favoriteServersStorage.SetCurrentServerId(server.Id);
+
                     if (CurrentConnectionDetails is null || !CurrentConnectionDetails.OriginalConnectionIntent.IsSameAs(connectionIntent))
                     {
                         CurrentConnectionDetails = new ConnectionDetails(
@@ -304,6 +315,7 @@ public class ConnectionManager : IInternalConnectionManager, IGuestHoleConnector
             else if (message.Status == VpnStatusIpcEntity.Disconnected)
             {
                 CurrentConnectionDetails = null;
+                _favoriteServersStorage.SetCurrentServerId(null);
             }
         }
 
@@ -376,12 +388,18 @@ public class ConnectionManager : IInternalConnectionManager, IGuestHoleConnector
 
     public async void Receive(ConnectionCertificateUpdatedMessage message)
     {
-        if (message.Certificate is not null)
+        AsymmetricKeyPair? clientKeyPair = _connectionKeyManager.GetKeyPairOrNull();
+
+        if (message.Certificate is not null && clientKeyPair is not null)
         {
-            await _vpnServiceCaller.UpdateConnectionCertificateAsync(new ConnectionCertificateIpcEntity
+            await _vpnServiceCaller.UpdateLocalAgentTlsCredentialsAsync(new LocalAgentTlsCredentialsIpcEntity()
             {
-                Pem = message.Certificate.Value.Pem,
-                ExpirationDateUtc = message.Certificate.Value.ExpirationUtcDate.UtcDateTime
+                ConnectionCertificate = new ConnectionCertificateIpcEntity()
+                {
+                    Pem = message.Certificate.Value.Pem,
+                    ExpirationDateUtc = message.Certificate.Value.ExpirationUtcDate.UtcDateTime,
+                },
+                ClientKeyPair = _entityMapper.Map<AsymmetricKeyPair, AsymmetricKeyPairIpcEntity>(clientKeyPair),
             });
         }
     }

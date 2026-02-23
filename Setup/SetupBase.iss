@@ -32,6 +32,8 @@
 #define VersionFolder "v" + MyAppVersion
 #define DisableAutoUpdateInstallerArg "/DISABLEAUTOUPDATE"
 #define DisableAutoUpdateClientArg "-DisableAutoUpdate"
+#define OpenOnDesktopInstallerArg "/OPENONDESKTOP"
+#define OpenOnDesktopClientArg "-OpenOnDesktop"
 #define AppFolder "Proton\VPN"
 #define RegistryRunPath "Software\Microsoft\Windows\CurrentVersion\Run"
 #define LegacyClientName "ProtonVPN"
@@ -185,6 +187,7 @@ Name: "pt_PT"; MessagesFile: "compiler:Languages\Portuguese.isl,Strings\Portugue
 Name: "sl_SI"; MessagesFile: "compiler:Languages\Slovenian.isl,Strings\Slovenian.isl"
 Name: "uk_UA"; MessagesFile: "compiler:Languages\Ukrainian.isl,Strings\Ukrainian.isl"
 Name: "ja_JP"; MessagesFile: "compiler:Languages\Japanese.isl,Strings\Japanese.isl"
+Name: "ar_SA"; MessagesFile: "compiler:Languages\Arabic.isl,Strings\Arabic.isl"
 
 [UninstallDelete]
 Type: filesandordirs; Name: "{app}\{#VersionFolder}\ServiceData"
@@ -244,7 +247,7 @@ type
   TInt64Array = array of Int64;
 
 var
-  IsToReboot, IsSilent, IsVerySilent, IsNotSilent, IsToDisableAutoUpdate: Boolean;
+  IsToReboot, IsSilent, IsVerySilent, IsNotSilent, IsToDisableAutoUpdate, IsToOpenOnDesktop: Boolean;
   InstallationProgressLabel: TNewStaticText;
   ProductDriveCheckBox, ProductMailCheckBox, ProductPassCheckBox: TNewCheckBox;
 
@@ -608,7 +611,15 @@ begin
   if IsToDisableAutoUpdate = true then begin
     Log('The app will be launched with auto updates disabled.');
   end;
-end; 
+end;
+
+procedure SetIsToOpenOnDesktop();
+begin
+  IsToOpenOnDesktop := Pos('{#OpenOnDesktopInstallerArg}', GetCmdTail()) > 0;
+  if IsToOpenOnDesktop = true then begin
+    Log('The app will be launched on desktop.');
+  end;
+end;
 
 // Returns 0 (zero) if versions are equal, -1 (negative one) if version1 is older and 1 (positive one) if version1 is more recent
 function CompareVersions(version1, version2: String): Integer;
@@ -627,6 +638,7 @@ var
 begin
   SetSilentModes();
   SetIsToDisableAutoUpdate();
+  SetIsToOpenOnDesktop();
   if IsWindowsVersionEqualOrHigher(10, 0, 19041) = False then begin
     if WizardSilent() = false then begin
       MsgBox('This application does not support your Windows version. You will be redirected to a download page with an application suitable for your Windows version. ', mbInformation, MB_OK);
@@ -785,6 +797,9 @@ begin
       end;
       if IsToDisableAutoUpdate = true then begin
         launcherArgs := launcherArgs + ' {#DisableAutoUpdateClientArg}';
+      end;
+      if IsToOpenOnDesktop = true then begin
+        launcherArgs := launcherArgs + ' {#OpenOnDesktopClientArg}';
       end;
 
       if IsNotSilent then
